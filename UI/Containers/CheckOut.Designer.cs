@@ -37,11 +37,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.pnlTrayLeft = new System.Windows.Forms.Panel();
+            this.pnlTrayRight = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHeading = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,11 +50,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.pnlTrayBottom = new System.Windows.Forms.Panel();
+            this.pnlTrayTop = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -96,13 +96,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.panel3);
             this.panel8.Controls.Add(this.panel4);
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Controls.Add(this.pnlTrayLeft);
+            this.panel8.Controls.Add(this.pnlTrayRight);
             this.panel8.Controls.Add(this.panel7);
             this.panel8.Controls.Add(this.panel6);
-            this.panel8.Controls.Add(this.panel1);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.pnlHeading);
+            this.panel8.Controls.Add(this.pnlTrayBottom);
+            this.panel8.Controls.Add(this.pnlTrayTop);
             this.panel8.Location = new System.Drawing.Point(12, 12);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(699, 329);
@@ -137,7 +137,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(587, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 45);
@@ -176,23 +176,23 @@
             this.label14.TabIndex = 7;
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel11
+            // pnlTrayLeft
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 48);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 279);
-            this.panel11.TabIndex = 2;
+            this.pnlTrayLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlTrayLeft.Location = new System.Drawing.Point(0, 48);
+            this.pnlTrayLeft.Name = "pnlTrayLeft";
+            this.pnlTrayLeft.Size = new System.Drawing.Size(1, 279);
+            this.pnlTrayLeft.TabIndex = 2;
             // 
-            // panel12
+            // pnlTrayRight
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(698, 48);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1, 279);
-            this.panel12.TabIndex = 3;
+            this.pnlTrayRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlTrayRight.Location = new System.Drawing.Point(698, 48);
+            this.pnlTrayRight.Name = "pnlTrayRight";
+            this.pnlTrayRight.Size = new System.Drawing.Size(1, 279);
+            this.pnlTrayRight.TabIndex = 3;
             // 
             // panel7
             // 
@@ -212,23 +212,23 @@
             this.panel6.Size = new System.Drawing.Size(699, 1);
             this.panel6.TabIndex = 9;
             // 
-            // panel1
+            // pnlHeading
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 46);
-            this.panel1.TabIndex = 6;
+            this.pnlHeading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlHeading.Controls.Add(this.label6);
+            this.pnlHeading.Controls.Add(this.label5);
+            this.pnlHeading.Controls.Add(this.label4);
+            this.pnlHeading.Controls.Add(this.label3);
+            this.pnlHeading.Controls.Add(this.label2);
+            this.pnlHeading.Controls.Add(this.label1);
+            this.pnlHeading.Controls.Add(this.panel2);
+            this.pnlHeading.Controls.Add(this.label7);
+            this.pnlHeading.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeading.Location = new System.Drawing.Point(0, 1);
+            this.pnlHeading.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeading.Name = "pnlHeading";
+            this.pnlHeading.Size = new System.Drawing.Size(699, 46);
+            this.pnlHeading.TabIndex = 6;
             // 
             // label6
             // 
@@ -326,23 +326,23 @@
             this.label7.TabIndex = 7;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel10
+            // pnlTrayBottom
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 328);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(699, 1);
-            this.panel10.TabIndex = 1;
+            this.pnlTrayBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTrayBottom.Location = new System.Drawing.Point(0, 328);
+            this.pnlTrayBottom.Name = "pnlTrayBottom";
+            this.pnlTrayBottom.Size = new System.Drawing.Size(699, 1);
+            this.pnlTrayBottom.TabIndex = 1;
             // 
-            // panel9
+            // pnlTrayTop
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(699, 1);
-            this.panel9.TabIndex = 0;
+            this.pnlTrayTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTrayTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTrayTop.Name = "pnlTrayTop";
+            this.pnlTrayTop.Size = new System.Drawing.Size(699, 1);
+            this.pnlTrayTop.TabIndex = 0;
             // 
             // CheckOut
             // 
@@ -360,7 +360,7 @@
             this.Text = "CheckOut";
             this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlHeading.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -370,7 +370,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHeading;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -379,10 +379,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel pnlTrayRight;
+        private System.Windows.Forms.Panel pnlTrayLeft;
+        private System.Windows.Forms.Panel pnlTrayBottom;
+        private System.Windows.Forms.Panel pnlTrayTop;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;

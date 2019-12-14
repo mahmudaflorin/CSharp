@@ -50,7 +50,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(127, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 69);
@@ -62,7 +62,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(407, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 69);
@@ -74,7 +74,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(499, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 69);
@@ -86,7 +86,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(591, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 69);
@@ -98,7 +98,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(35, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 69);
@@ -125,7 +125,7 @@
             // CartItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
