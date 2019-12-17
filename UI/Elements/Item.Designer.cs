@@ -65,7 +65,7 @@
             // 
             // pnlBottom
             // 
-            this.pnlBottom.BackColor = System.Drawing.Color.Silver;
+            this.pnlBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(1, 279);
             this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -75,7 +75,7 @@
             // 
             // pnlRight
             // 
-            this.pnlRight.BackColor = System.Drawing.Color.LightGray;
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(204, 1);
             this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -116,6 +116,8 @@
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
+            this.btnAddToCart.MouseEnter += new System.EventHandler(this.PictureBox1_MouseEnter);
+            this.btnAddToCart.MouseLeave += new System.EventHandler(this.PictureBox1_MouseLeave);
             // 
             // lblPriceTag
             // 

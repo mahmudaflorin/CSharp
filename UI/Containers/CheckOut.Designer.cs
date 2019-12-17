@@ -30,13 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnlTray = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.pnlTrayLeft = new System.Windows.Forms.Panel();
             this.pnlTrayRight = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -52,20 +47,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pnlTrayBottom = new System.Windows.Forms.Panel();
             this.pnlTrayTop = new System.Windows.Forms.Panel();
-            this.panel8.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlTray.SuspendLayout();
             this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(158)))), ((int)(((byte)(251)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(510, 358);
+            this.button1.Location = new System.Drawing.Point(510, 392);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 40);
@@ -76,12 +72,13 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(85)))), ((int)(((byte)(35)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(294, 358);
+            this.button2.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Location = new System.Drawing.Point(304, 392);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 40);
@@ -89,24 +86,23 @@
             this.button2.Text = "Clear Cart";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // panel8
+            // pnlTray
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlTray.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.panel3);
-            this.panel8.Controls.Add(this.panel4);
-            this.panel8.Controls.Add(this.pnlTrayLeft);
-            this.panel8.Controls.Add(this.pnlTrayRight);
-            this.panel8.Controls.Add(this.panel7);
-            this.panel8.Controls.Add(this.panel6);
-            this.panel8.Controls.Add(this.pnlHeading);
-            this.panel8.Controls.Add(this.pnlTrayBottom);
-            this.panel8.Controls.Add(this.pnlTrayTop);
-            this.panel8.Location = new System.Drawing.Point(12, 12);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(699, 329);
-            this.panel8.TabIndex = 10;
+            this.pnlTray.Controls.Add(this.panel3);
+            this.pnlTray.Controls.Add(this.pnlTrayLeft);
+            this.pnlTray.Controls.Add(this.pnlTrayRight);
+            this.pnlTray.Controls.Add(this.panel7);
+            this.pnlTray.Controls.Add(this.panel6);
+            this.pnlTray.Controls.Add(this.pnlHeading);
+            this.pnlTray.Controls.Add(this.pnlTrayBottom);
+            this.pnlTray.Controls.Add(this.pnlTrayTop);
+            this.pnlTray.Location = new System.Drawing.Point(12, 12);
+            this.pnlTray.Name = "pnlTray";
+            this.pnlTray.Size = new System.Drawing.Size(699, 329);
+            this.pnlTray.TabIndex = 10;
             // 
             // panel3
             // 
@@ -115,70 +111,12 @@
             this.panel3.Location = new System.Drawing.Point(1, 48);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(697, 233);
+            this.panel3.Size = new System.Drawing.Size(697, 279);
             this.panel3.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(1, 281);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(697, 46);
-            this.panel4.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(587, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 45);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Price Total";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 45);
-            this.label13.TabIndex = 1;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 45);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(679, 1);
-            this.panel5.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label14.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(679, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 46);
-            this.label14.TabIndex = 7;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlTrayLeft
             // 
-            this.pnlTrayLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayLeft.BackColor = System.Drawing.Color.White;
             this.pnlTrayLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTrayLeft.Location = new System.Drawing.Point(0, 48);
             this.pnlTrayLeft.Name = "pnlTrayLeft";
@@ -187,7 +125,7 @@
             // 
             // pnlTrayRight
             // 
-            this.pnlTrayRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayRight.BackColor = System.Drawing.Color.White;
             this.pnlTrayRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlTrayRight.Location = new System.Drawing.Point(698, 48);
             this.pnlTrayRight.Name = "pnlTrayRight";
@@ -214,7 +152,7 @@
             // 
             // pnlHeading
             // 
-            this.pnlHeading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlHeading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.pnlHeading.Controls.Add(this.label6);
             this.pnlHeading.Controls.Add(this.label5);
             this.pnlHeading.Controls.Add(this.label4);
@@ -328,7 +266,7 @@
             // 
             // pnlTrayBottom
             // 
-            this.pnlTrayBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.pnlTrayBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTrayBottom.Location = new System.Drawing.Point(0, 328);
             this.pnlTrayBottom.Name = "pnlTrayBottom";
@@ -337,19 +275,33 @@
             // 
             // pnlTrayTop
             // 
-            this.pnlTrayTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.pnlTrayTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.pnlTrayTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTrayTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTrayTop.Name = "pnlTrayTop";
             this.pnlTrayTop.Size = new System.Drawing.Size(699, 1);
             this.pnlTrayTop.TabIndex = 0;
             // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(601, 343);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 45);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Price Total";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CheckOut
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 460);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pnlTray);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
@@ -358,8 +310,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
-            this.panel8.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.pnlTray.ResumeLayout(false);
             this.pnlHeading.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -368,7 +319,7 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnlTray;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlHeading;
         private System.Windows.Forms.Label label6;
@@ -385,10 +336,6 @@
         private System.Windows.Forms.Panel pnlTrayTop;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
     }
 }

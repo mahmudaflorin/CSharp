@@ -100,18 +100,18 @@ namespace ResManaged3.UI.Elements
 
         private void PictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pnlRight.BackColor = Color.DarkGray;
-            pnlBottom.BackColor = Color.DarkGray;
-            pnlLeft.BackColor = Color.LightGray;
-            pnlTop.BackColor = Color.LightGray;
+            pnlRight.BackColor = Color.FromArgb(249, 170, 51);
+            pnlBottom.BackColor = Color.FromArgb(249, 170, 51);
+            pnlLeft.BackColor = Color.FromArgb(249, 170, 51);
+            pnlTop.BackColor = Color.FromArgb(249, 170, 51);
         }
 
         private void PictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pnlRight.BackColor = Color.LightGray;
-            pnlBottom.BackColor = Color.Silver;
-            pnlLeft.BackColor = Color.WhiteSmoke;
-            pnlTop.BackColor = Color.WhiteSmoke;
+            pnlRight.BackColor = Color.FromArgb(241, 241, 241);
+            pnlBottom.BackColor = Color.FromArgb(241, 241, 241);
+            pnlLeft.BackColor = Color.FromArgb(241, 241, 241);
+            pnlTop.BackColor = Color.FromArgb(241, 241, 241);
         }
     }
 }
