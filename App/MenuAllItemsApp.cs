@@ -13,7 +13,7 @@ namespace ResManaged3.App
                 item.ItemID = "p" + i;
                 item.Title = "Random Title " + i;
                 item.Description = "A big random test description for demo purpose " + i;
-                item.PriceTag = "$" + i + "24";
+                item.PriceTag = i + "24";
 
                 flowLayoutPanel.Controls.Add(item);
             }

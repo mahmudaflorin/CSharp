@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblPriceEach = new System.Windows.Forms.Label();
+            this.lblPriceTotal = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,65 +46,65 @@
             this.panel1.Size = new System.Drawing.Size(648, 1);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lblItemName
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(127, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 69);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Item Name";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblItemName.BackColor = System.Drawing.Color.Transparent;
+            this.lblItemName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblItemName.ForeColor = System.Drawing.Color.DimGray;
+            this.lblItemName.Location = new System.Drawing.Point(127, 0);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(280, 69);
+            this.lblItemName.TabIndex = 2;
+            this.lblItemName.Text = "Item Name";
+            this.lblItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblQuantity
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(407, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 69);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Quantity";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblQuantity.ForeColor = System.Drawing.Color.DimGray;
+            this.lblQuantity.Location = new System.Drawing.Point(407, 0);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(92, 69);
+            this.lblQuantity.TabIndex = 3;
+            this.lblQuantity.Text = "Quantity";
+            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblPriceEach
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(499, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 69);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Price Each";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPriceEach.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriceEach.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPriceEach.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPriceEach.Location = new System.Drawing.Point(499, 0);
+            this.lblPriceEach.Name = "lblPriceEach";
+            this.lblPriceEach.Size = new System.Drawing.Size(92, 69);
+            this.lblPriceEach.TabIndex = 4;
+            this.lblPriceEach.Text = "Price Each";
+            this.lblPriceEach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblPriceTotal
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(591, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 69);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Price Total";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPriceTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriceTotal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPriceTotal.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPriceTotal.Location = new System.Drawing.Point(591, 0);
+            this.lblPriceTotal.Name = "lblPriceTotal";
+            this.lblPriceTotal.Size = new System.Drawing.Size(92, 69);
+            this.lblPriceTotal.TabIndex = 5;
+            this.lblPriceTotal.Text = "Price Total";
+            this.lblPriceTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lblCode
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(35, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 69);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Code";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCode.BackColor = System.Drawing.Color.Transparent;
+            this.lblCode.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCode.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCode.Location = new System.Drawing.Point(35, 0);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(92, 69);
+            this.lblCode.TabIndex = 6;
+            this.lblCode.Text = "Code";
+            this.lblCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -121,16 +121,17 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "x";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // CartItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblItemName);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.lblPriceEach);
+            this.Controls.Add(this.lblCode);
+            this.Controls.Add(this.lblPriceTotal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,11 +145,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblItemName;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblPriceEach;
+        private System.Windows.Forms.Label lblPriceTotal;
+        private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Button button2;
     }
 }

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\CheckOutApp.cs" />
+    <Compile Include="App\CartItemApp.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

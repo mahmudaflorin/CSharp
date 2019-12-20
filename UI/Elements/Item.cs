@@ -64,7 +64,8 @@ namespace ResManaged3.UI.Elements
                 Invalidate();
             }
         }
-        Button btnCheckOut;
+
+        static Button btnCheckOut;
         public Item()
         {
             InitializeComponent();
@@ -73,16 +74,16 @@ namespace ResManaged3.UI.Elements
 
         private void BtnAddToCart_Click(object sender, EventArgs e)
         {
-            
-            if(btnCheckOut==null)
+
+            if (btnCheckOut == null)
             {
-                if(this.Parent.Parent.Parent.Parent is UserEnd)
+                if (this.Parent.Parent.Parent.Parent is UserEnd)
                 {
                     UserEnd userEnd = this.Parent.Parent.Parent.Parent as UserEnd;
                     Control[] controls = userEnd.Controls.Find("btnCheckOut", true);// as Button;
-                    if(controls.Length>0)
+                    if (controls.Length > 0)
                     {
-                        if(controls[0] is Button)
+                        if (controls[0] is Button)
                         {
                             btnCheckOut = controls[0] as Button;
                         }
@@ -90,12 +91,19 @@ namespace ResManaged3.UI.Elements
                 }
             }
 
-            MenuAllItemsApp.itemList.Add(this);
-            btnCheckOut.Text = MenuAllItemsApp.itemList.Count + "";
+            CheckOutApp.AddItem(ItemID, Title, PriceTag);
 
+            
+            //CheckOutApp.AddItem(itemApp);
 
+            //MenuAllItemsApp.itemList.Add(this);
+            CountCartItem();
 
+        }
 
+        public static void CountCartItem()
+        {
+            btnCheckOut.Text = "( " + CheckOutApp.TotalItems() + " )    Check Out";
         }
 
         private void PictureBox1_MouseEnter(object sender, EventArgs e)
