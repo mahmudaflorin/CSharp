@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ResManaged3.App;
+using ResManaged3.UI.Containers;
 
 namespace ResManaged3.UI.Elements
 {
@@ -60,9 +61,11 @@ namespace ResManaged3.UI.Elements
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            
             this.Dispose();
             CheckOutApp.RemoveItem(this.Code);
             Item.CountCartItem();
+            CheckOut.Upd.Invoke();
         }
 
         public double PriceTotal

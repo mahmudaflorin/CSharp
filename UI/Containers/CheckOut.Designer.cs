@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnClearCart = new System.Windows.Forms.Button();
             this.pnlTray = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlTrayLeft = new System.Windows.Forms.Panel();
@@ -47,7 +47,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pnlTrayBottom = new System.Windows.Forms.Panel();
             this.pnlTrayTop = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblPriceTotal = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlTray.SuspendLayout();
             this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
@@ -69,22 +70,23 @@
             this.button1.Text = "Confirm Order";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnClearCart
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(304, 392);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Clear Cart";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClearCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnClearCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClearCart.FlatAppearance.BorderSize = 0;
+            this.btnClearCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearCart.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearCart.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClearCart.Location = new System.Drawing.Point(304, 392);
+            this.btnClearCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClearCart.Name = "btnClearCart";
+            this.btnClearCart.Size = new System.Drawing.Size(200, 40);
+            this.btnClearCart.TabIndex = 4;
+            this.btnClearCart.Text = "Clear Cart";
+            this.btnClearCart.UseVisualStyleBackColor = false;
+            this.btnClearCart.Click += new System.EventHandler(this.BtnClearCart_Click);
             // 
             // pnlTray
             // 
@@ -176,7 +178,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(131, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(274, 45);
+            this.label6.Size = new System.Drawing.Size(291, 45);
             this.label6.TabIndex = 6;
             this.label6.Text = "Item Name";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,7 +189,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(405, 0);
+            this.label5.Location = new System.Drawing.Point(422, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 45);
             this.label5.TabIndex = 5;
@@ -200,7 +202,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
             this.label4.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(497, 0);
+            this.label4.Location = new System.Drawing.Point(514, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 45);
             this.label4.TabIndex = 4;
@@ -213,7 +215,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(589, 0);
+            this.label3.Location = new System.Drawing.Point(606, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 45);
             this.label3.TabIndex = 3;
@@ -249,7 +251,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 45);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(681, 1);
+            this.panel2.Size = new System.Drawing.Size(698, 1);
             this.panel2.TabIndex = 0;
             // 
             // label7
@@ -258,9 +260,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(681, 0);
+            this.label7.Location = new System.Drawing.Point(698, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 46);
+            this.label7.Size = new System.Drawing.Size(1, 46);
             this.label7.TabIndex = 7;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -282,27 +284,41 @@
             this.pnlTrayTop.Size = new System.Drawing.Size(699, 1);
             this.pnlTrayTop.TabIndex = 0;
             // 
-            // label11
+            // lblPriceTotal
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(601, 343);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 45);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Price Total";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPriceTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPriceTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriceTotal.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceTotal.Location = new System.Drawing.Point(618, 343);
+            this.lblPriceTotal.Name = "lblPriceTotal";
+            this.lblPriceTotal.Size = new System.Drawing.Size(92, 45);
+            this.lblPriceTotal.TabIndex = 3;
+            this.lblPriceTotal.Text = "0.00";
+            this.lblPriceTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(526, 343);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 45);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Total Price :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CheckOut
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 460);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblPriceTotal);
             this.Controls.Add(this.pnlTray);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnClearCart);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,7 +334,7 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClearCart;
         private System.Windows.Forms.Panel pnlTray;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlHeading;
@@ -336,6 +352,7 @@
         private System.Windows.Forms.Panel pnlTrayTop;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblPriceTotal;
+        private System.Windows.Forms.Label label8;
     }
 }

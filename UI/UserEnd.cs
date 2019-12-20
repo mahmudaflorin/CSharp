@@ -32,7 +32,7 @@ namespace ResManaged3.UI
             }
 
 
-            BtnPersonalInfo_Click(btnPersonalInfo, new EventArgs());
+            //BtnPersonalInfo_Click(btnPersonalInfo, new EventArgs());
             //form3 = new Form3();
             // pnlContainer.Controls.Add(form3);
             //pnlContainer.Tag = form3;

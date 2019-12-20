@@ -10,7 +10,7 @@ namespace ResManaged3.App
 {
     class CheckOutApp
     {
-        static List<CartItemApp> itemApps = new List<CartItemApp>();
+        public static List<CartItemApp> itemApps = new List<CartItemApp>();
 
         public static void AddItem(string ItemID, string Title, string PriceTag)
         {
@@ -46,26 +46,35 @@ namespace ResManaged3.App
             }
             return c;
         }
-        public static void Calculate(Panel panel)
-        {
-            foreach(CartItemApp i in itemApps)
-            {
-                CartItem cartItem = new CartItem();
-                cartItem.Code = i.ItemCode;
-                cartItem.ItemName = i.ItemName;
-                cartItem.Quantity = i.Quantity;
-                cartItem.PriceEach = i.PriceTag;
-                cartItem.PriceTotal = i.PriceTag * i.Quantity;
-                cartItem.Dock = DockStyle.Top;
-                //cartItem.BringToFront();
-                //flowLayoutPanel.Controls.Add(cartItem);
-                panel.Controls.Add(cartItem);
-            }
-        }
+        //public static void Calculate(Panel panel)
+        //{
+        //    foreach(CartItemApp i in itemApps)
+        //    {
+        //        CartItem cartItem = new CartItem();
+        //        cartItem.Code = i.ItemCode;
+        //        cartItem.ItemName = i.ItemName;
+        //        cartItem.Quantity = i.Quantity;
+        //        cartItem.PriceEach = i.PriceTag;
+        //        cartItem.PriceTotal = i.PriceTag * i.Quantity;
+        //        cartItem.Dock = DockStyle.Top;
+               
+        //        panel.Controls.Add(cartItem);
+        //    }
+        //}
 
         public static void RemoveItem(string itemCode)
         {
             itemApps.Remove(itemApps.Find(x => x.ItemCode == itemCode));
+        }
+
+        public static double CalculateTotalPrice()
+        {
+            double totalPrice  = 0;
+            foreach (CartItemApp cartItemApp in itemApps)
+            {
+                totalPrice = totalPrice + (cartItemApp.PriceTag * cartItemApp.Quantity);
+            }
+            return totalPrice;
         }
     }
 }
