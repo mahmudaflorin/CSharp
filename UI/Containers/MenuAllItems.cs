@@ -21,7 +21,24 @@ namespace ResManaged3.UI.Containers
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
 
-            MenuAllItemsApp.Populate(flowLayoutPanel1);
+            PopulateFlow();
+        }
+
+        private void PopulateFlow()
+        {
+            MenuAllItemsApp menuAllItemsApp = new MenuAllItemsApp();
+            List<ItemApp> itemAppList= menuAllItemsApp.GetItems();
+
+            foreach(ItemApp itemApp in itemAppList)
+            {
+                Item item = new Item();
+                item.ItemID = itemApp.ItemID;
+                item.Title = itemApp.Title;
+                item.Description = itemApp.Description;
+                item.PriceTag = itemApp.PriceTag.ToString();
+
+                flowLayoutPanel1.Controls.Add(item);
+            }
         }
 
         
