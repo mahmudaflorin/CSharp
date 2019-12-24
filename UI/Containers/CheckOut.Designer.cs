@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirmOrder = new System.Windows.Forms.Button();
             this.btnClearCart = new System.Windows.Forms.Button();
             this.pnlTray = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,22 +53,23 @@
             this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConfirmOrder
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(158)))), ((int)(((byte)(251)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(510, 392);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Confirm Order";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConfirmOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(158)))), ((int)(((byte)(251)))));
+            this.btnConfirmOrder.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnConfirmOrder.FlatAppearance.BorderSize = 0;
+            this.btnConfirmOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmOrder.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmOrder.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmOrder.Location = new System.Drawing.Point(510, 392);
+            this.btnConfirmOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnConfirmOrder.Name = "btnConfirmOrder";
+            this.btnConfirmOrder.Size = new System.Drawing.Size(200, 40);
+            this.btnConfirmOrder.TabIndex = 4;
+            this.btnConfirmOrder.Text = "Confirm Order";
+            this.btnConfirmOrder.UseVisualStyleBackColor = false;
+            this.btnConfirmOrder.Click += new System.EventHandler(this.BtnConfirmOrder_Click);
             // 
             // btnClearCart
             // 
@@ -319,7 +320,7 @@
             this.Controls.Add(this.lblPriceTotal);
             this.Controls.Add(this.pnlTray);
             this.Controls.Add(this.btnClearCart);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfirmOrder);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -333,7 +334,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirmOrder;
         private System.Windows.Forms.Button btnClearCart;
         private System.Windows.Forms.Panel pnlTray;
         private System.Windows.Forms.Panel panel3;

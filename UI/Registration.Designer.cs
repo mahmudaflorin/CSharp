@@ -1,6 +1,6 @@
-﻿namespace ResManaged3.UI.Containers
+﻿namespace ResManaged3.UI
 {
-    partial class PersonalInfo
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancelChanges = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.tbUserName = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tbName = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,30 +62,26 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
+            this.tbMobile = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
+            this.tbAddress = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.btnCancelChanges = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.tbUserName = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbName = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbMobile = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbAddress = new ResManaged3.UI.CustomControls.TransTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,6 +91,38 @@
             this.panel26.SuspendLayout();
             this.panel31.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(300, 439);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(200, 40);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update Changes";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelChanges
+            // 
+            this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelChanges.FlatAppearance.BorderSize = 0;
+            this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
+            this.btnCancelChanges.Location = new System.Drawing.Point(60, 439);
+            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancelChanges.Name = "btnCancelChanges";
+            this.btnCancelChanges.Size = new System.Drawing.Size(200, 40);
+            this.btnCancelChanges.TabIndex = 5;
+            this.btnCancelChanges.Text = "Cancel Changes";
+            this.btnCancelChanges.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel1
             // 
@@ -105,10 +137,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel21);
             this.flowLayoutPanel1.Controls.Add(this.panel26);
             this.flowLayoutPanel1.Controls.Add(this.panel31);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 82);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 350);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.TabIndex = 4;
             // 
             // panel16
             // 
@@ -124,6 +156,17 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(440, 77);
             this.panel16.TabIndex = 6;
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbUserName.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.ForeColor = System.Drawing.Color.DimGray;
+            this.tbUserName.Location = new System.Drawing.Point(125, 27);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(300, 23);
+            this.tbUserName.TabIndex = 6;
             // 
             // label1
             // 
@@ -186,6 +229,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 77);
             this.panel3.TabIndex = 7;
+            // 
+            // tbName
+            // 
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbName.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.ForeColor = System.Drawing.Color.DimGray;
+            this.tbName.Location = new System.Drawing.Point(125, 27);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(300, 23);
+            this.tbName.TabIndex = 6;
             // 
             // label2
             // 
@@ -421,6 +475,17 @@
             this.panel21.Size = new System.Drawing.Size(440, 77);
             this.panel21.TabIndex = 10;
             // 
+            // tbEmail
+            // 
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbEmail.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.tbEmail.Location = new System.Drawing.Point(125, 27);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(300, 23);
+            this.tbEmail.TabIndex = 6;
+            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -482,6 +547,17 @@
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(440, 77);
             this.panel26.TabIndex = 11;
+            // 
+            // tbMobile
+            // 
+            this.tbMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMobile.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbMobile.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMobile.ForeColor = System.Drawing.Color.DimGray;
+            this.tbMobile.Location = new System.Drawing.Point(125, 27);
+            this.tbMobile.Name = "tbMobile";
+            this.tbMobile.Size = new System.Drawing.Size(300, 23);
+            this.tbMobile.TabIndex = 6;
             // 
             // label6
             // 
@@ -545,6 +621,17 @@
             this.panel31.Size = new System.Drawing.Size(440, 77);
             this.panel31.TabIndex = 12;
             // 
+            // tbAddress
+            // 
+            this.tbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAddress.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbAddress.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress.ForeColor = System.Drawing.Color.DimGray;
+            this.tbAddress.Location = new System.Drawing.Point(125, 27);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(300, 23);
+            this.tbAddress.TabIndex = 6;
+            // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
@@ -592,105 +679,19 @@
             this.panel35.Size = new System.Drawing.Size(1, 77);
             this.panel35.TabIndex = 0;
             // 
-            // btnCancelChanges
-            // 
-            this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelChanges.FlatAppearance.BorderSize = 0;
-            this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
-            this.btnCancelChanges.Location = new System.Drawing.Point(148, 369);
-            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelChanges.Name = "btnCancelChanges";
-            this.btnCancelChanges.Size = new System.Drawing.Size(200, 40);
-            this.btnCancelChanges.TabIndex = 3;
-            this.btnCancelChanges.Text = "Cancel Changes";
-            this.btnCancelChanges.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(388, 369);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(200, 40);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update Changes";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // tbUserName
-            // 
-            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUserName.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.tbUserName.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUserName.Location = new System.Drawing.Point(125, 27);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(300, 23);
-            this.tbUserName.TabIndex = 6;
-            // 
-            // tbName
-            // 
-            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbName.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.tbName.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.ForeColor = System.Drawing.Color.DimGray;
-            this.tbName.Location = new System.Drawing.Point(125, 27);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(300, 23);
-            this.tbName.TabIndex = 6;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbEmail.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.tbEmail.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.tbEmail.Location = new System.Drawing.Point(125, 27);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(300, 23);
-            this.tbEmail.TabIndex = 6;
-            // 
-            // tbMobile
-            // 
-            this.tbMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMobile.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.tbMobile.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMobile.ForeColor = System.Drawing.Color.DimGray;
-            this.tbMobile.Location = new System.Drawing.Point(125, 27);
-            this.tbMobile.Name = "tbMobile";
-            this.tbMobile.Size = new System.Drawing.Size(300, 23);
-            this.tbMobile.TabIndex = 6;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbAddress.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.tbAddress.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.ForeColor = System.Drawing.Color.DimGray;
-            this.tbAddress.Location = new System.Drawing.Point(125, 27);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(300, 23);
-            this.tbAddress.TabIndex = 6;
-            // 
-            // PersonalInfo
+            // Registration
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(724, 460);
+            this.ClientSize = new System.Drawing.Size(560, 561);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCancelChanges);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PersonalInfo";
-            this.Text = "PersonalInfo";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Registration";
+            this.Text = "Registration";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -706,9 +707,9 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancelChanges;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancelChanges;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel16;
         private CustomControls.TransTextBox tbUserName;
         private System.Windows.Forms.Label label1;
@@ -724,12 +725,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.RadioButton rbO;
         private System.Windows.Forms.RadioButton rbF;

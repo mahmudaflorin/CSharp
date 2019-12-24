@@ -17,6 +17,7 @@ namespace ResManaged3.UI
         private static MenuAllItems menuAllItems;
         private static PersonalInfo personalInfo;
         private static CheckOut checkOut;
+        private static DeliverySettings deliverySettings;
         public UserEnd()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace ResManaged3.UI
             }
 
 
-            //BtnPersonalInfo_Click(btnPersonalInfo, new EventArgs());
+            BtnDeliverySettings_Click(btnPersonalInfo, new EventArgs());
             //form3 = new Form3();
             // pnlContainer.Controls.Add(form3);
             //pnlContainer.Tag = form3;
@@ -114,6 +115,25 @@ namespace ResManaged3.UI
            
             //Contain(checkOut);
 
+        }
+
+        private void BtnDeliverySettings_Click(object sender, EventArgs e)
+        {
+            if (deliverySettings == null)
+            {
+                deliverySettings = new DeliverySettings();
+                Contain(deliverySettings);
+            }
+            else
+            {
+                Contain(deliverySettings);
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+            base.OnFormClosing(e);
         }
     }
 }

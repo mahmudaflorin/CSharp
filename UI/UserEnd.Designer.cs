@@ -440,6 +440,7 @@
             this.btnDeliverySettings.Text = "Delivery Settings";
             this.btnDeliverySettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeliverySettings.UseVisualStyleBackColor = false;
+            this.btnDeliverySettings.Click += new System.EventHandler(this.BtnDeliverySettings_Click);
             // 
             // btnPersonalInfo
             // 

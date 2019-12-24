@@ -104,5 +104,16 @@ namespace ResManaged3.UI.Containers
 
             btnCheckOut.Text = "( " + CheckOutApp.TotalItems() + " )    Check Out";
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnConfirmOrder_Click(object sender, EventArgs e)
+        {
+            CheckOutApp.PlaceOrder();
+            BtnClearCart_Click(btnClearCart, new EventArgs());
+        }
     }
 }

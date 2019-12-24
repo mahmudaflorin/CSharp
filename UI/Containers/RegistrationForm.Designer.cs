@@ -1,6 +1,6 @@
 ﻿namespace ResManaged3.UI.Containers
 {
-    partial class PersonalInfo
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.btnCancelChanges = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.tbUserName = new ResManaged3.UI.CustomControls.TransTextBox();
             this.tbName = new ResManaged3.UI.CustomControls.TransTextBox();
             this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
@@ -92,6 +92,39 @@
             this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.btnRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(317, 508);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(200, 40);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(77, 508);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(200, 40);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -105,10 +138,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel21);
             this.flowLayoutPanel1.Controls.Add(this.panel26);
             this.flowLayoutPanel1.Controls.Add(this.panel31);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 350);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 471);
+            this.flowLayoutPanel1.TabIndex = 4;
             // 
             // panel16
             // 
@@ -592,38 +625,6 @@
             this.panel35.Size = new System.Drawing.Size(1, 77);
             this.panel35.TabIndex = 0;
             // 
-            // btnCancelChanges
-            // 
-            this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelChanges.FlatAppearance.BorderSize = 0;
-            this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
-            this.btnCancelChanges.Location = new System.Drawing.Point(148, 369);
-            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelChanges.Name = "btnCancelChanges";
-            this.btnCancelChanges.Size = new System.Drawing.Size(200, 40);
-            this.btnCancelChanges.TabIndex = 3;
-            this.btnCancelChanges.Text = "Cancel Changes";
-            this.btnCancelChanges.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(388, 369);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(200, 40);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update Changes";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
             // tbUserName
             // 
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -679,18 +680,20 @@
             this.tbAddress.Size = new System.Drawing.Size(300, 23);
             this.tbAddress.TabIndex = 6;
             // 
-            // PersonalInfo
+            // RegistrationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(724, 460);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnCancelChanges);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(560, 561);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PersonalInfo";
-            this.Text = "PersonalInfo";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "RegistrationForm";
+            this.Text = "PLand";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -706,9 +709,9 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancelChanges;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel16;
         private CustomControls.TransTextBox tbUserName;
         private System.Windows.Forms.Label label1;
@@ -724,12 +727,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.RadioButton rbO;
         private System.Windows.Forms.RadioButton rbF;

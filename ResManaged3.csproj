@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,15 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\AuthApp.cs" />
     <Compile Include="App\CheckOutApp.cs" />
     <Compile Include="App\CartItemApp.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Data\Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Containers\CheckOut.cs">
@@ -65,17 +76,38 @@
     <Compile Include="UI\Containers\CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Containers\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Containers\MenuAllItems.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Containers\MenuAllItems.Designer.cs">
       <DependentUpon>MenuAllItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Containers\DeliverySettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\DeliverySettings.Designer.cs">
+      <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Containers\PersonalInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Containers\PersonalInfo.Designer.cs">
       <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomControls\SpecGroupBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\CustomControls\TransTextBox.cs">
       <SubType>Component</SubType>
@@ -92,15 +124,24 @@
     <Compile Include="UI\Elements\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Landing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Landing.Designer.cs">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserEnd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UserEnd.Designer.cs">
       <DependentUpon>UserEnd.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -109,21 +150,37 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Containers\CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\MenuAllItems.resx">
       <DependentUpon>MenuAllItems.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\DeliverySettings.resx">
+      <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\PersonalInfo.resx">
       <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Elements\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Elements\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Landing.resx">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserEnd.resx">
       <DependentUpon>UserEnd.cs</DependentUpon>
@@ -142,8 +199,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="UI\Resources\" />
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\ResM.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ResM_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ResM.mdf</DependentUpon>
+    </Content>
+    <Content Include="UI\Resources\cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

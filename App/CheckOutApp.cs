@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ResManaged3.UI.Elements;
+using ResManaged3.Data;
 
 namespace ResManaged3.App
 {
@@ -46,21 +47,6 @@ namespace ResManaged3.App
             }
             return c;
         }
-        //public static void Calculate(Panel panel)
-        //{
-        //    foreach(CartItemApp i in itemApps)
-        //    {
-        //        CartItem cartItem = new CartItem();
-        //        cartItem.Code = i.ItemCode;
-        //        cartItem.ItemName = i.ItemName;
-        //        cartItem.Quantity = i.Quantity;
-        //        cartItem.PriceEach = i.PriceTag;
-        //        cartItem.PriceTotal = i.PriceTag * i.Quantity;
-        //        cartItem.Dock = DockStyle.Top;
-               
-        //        panel.Controls.Add(cartItem);
-        //    }
-        //}
 
         public static void RemoveItem(string itemCode)
         {
@@ -75,6 +61,11 @@ namespace ResManaged3.App
                 totalPrice = totalPrice + (cartItemApp.PriceTag * cartItemApp.Quantity);
             }
             return totalPrice;
+        }
+
+        public static void PlaceOrder()
+        {
+            Order.InserOrdersDb();
         }
     }
 }

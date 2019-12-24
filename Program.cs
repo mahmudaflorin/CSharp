@@ -17,7 +17,8 @@ namespace ResManaged3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserEnd());
+            //Application.Run(new UserEnd());
+            Application.Run(new Landing());
         }
     }
 }

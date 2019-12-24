@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ResManaged3
+namespace ResManaged3.UI
 {
-    public partial class LoginForm : Form
+    public partial class Registration : Form
     {
-        public LoginForm()
+        public Registration()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
