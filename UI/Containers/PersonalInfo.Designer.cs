@@ -136,12 +136,14 @@
             // 
             // tbUserName
             // 
+            this.tbUserName.BackColor = System.Drawing.Color.White;
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUserName.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
             this.tbUserName.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUserName.ForeColor = System.Drawing.Color.DimGray;
             this.tbUserName.Location = new System.Drawing.Point(125, 27);
             this.tbUserName.Name = "tbUserName";
+            this.tbUserName.ReadOnly = true;
             this.tbUserName.Size = new System.Drawing.Size(300, 23);
             this.tbUserName.TabIndex = 6;
             // 

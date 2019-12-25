@@ -50,7 +50,6 @@
             this.pnlMyProDD = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnDeliverySettings = new System.Windows.Forms.Button();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
             this.btnMyPro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -99,7 +98,7 @@
             this.pnlSupportDD.Controls.Add(this.btnFeedback);
             this.pnlSupportDD.Controls.Add(this.btnFaqs);
             this.pnlSupportDD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSupportDD.Location = new System.Drawing.Point(0, 493);
+            this.pnlSupportDD.Location = new System.Drawing.Point(0, 453);
             this.pnlSupportDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSupportDD.Name = "pnlSupportDD";
             this.pnlSupportDD.Size = new System.Drawing.Size(203, 120);
@@ -178,7 +177,7 @@
             this.btnSupport.ForeColor = System.Drawing.Color.White;
             this.btnSupport.Image = ((System.Drawing.Image)(resources.GetObject("btnSupport.Image")));
             this.btnSupport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSupport.Location = new System.Drawing.Point(0, 453);
+            this.btnSupport.Location = new System.Drawing.Point(0, 413);
             this.btnSupport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
@@ -195,7 +194,7 @@
             this.pnlSubMenuDiv2.Controls.Add(this.label4);
             this.pnlSubMenuDiv2.Controls.Add(this.label5);
             this.pnlSubMenuDiv2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuDiv2.Location = new System.Drawing.Point(0, 452);
+            this.pnlSubMenuDiv2.Location = new System.Drawing.Point(0, 412);
             this.pnlSubMenuDiv2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSubMenuDiv2.Name = "pnlSubMenuDiv2";
             this.pnlSubMenuDiv2.Size = new System.Drawing.Size(203, 1);
@@ -226,7 +225,7 @@
             this.pnlMenuDD.Controls.Add(this.btnCategory);
             this.pnlMenuDD.Controls.Add(this.btnAllItems);
             this.pnlMenuDD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenuDD.Location = new System.Drawing.Point(0, 292);
+            this.pnlMenuDD.Location = new System.Drawing.Point(0, 252);
             this.pnlMenuDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMenuDD.Name = "pnlMenuDD";
             this.pnlMenuDD.Size = new System.Drawing.Size(203, 160);
@@ -326,7 +325,7 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMenu.Location = new System.Drawing.Point(0, 252);
+            this.btnMenu.Location = new System.Drawing.Point(0, 212);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
@@ -343,7 +342,7 @@
             this.pnlSideBarDiv1.Controls.Add(this.label3);
             this.pnlSideBarDiv1.Controls.Add(this.label2);
             this.pnlSideBarDiv1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSideBarDiv1.Location = new System.Drawing.Point(0, 251);
+            this.pnlSideBarDiv1.Location = new System.Drawing.Point(0, 211);
             this.pnlSideBarDiv1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSideBarDiv1.Name = "pnlSideBarDiv1";
             this.pnlSideBarDiv1.Size = new System.Drawing.Size(203, 1);
@@ -371,13 +370,12 @@
             // 
             this.pnlMyProDD.Controls.Add(this.btnLogOut);
             this.pnlMyProDD.Controls.Add(this.btnMyOrders);
-            this.pnlMyProDD.Controls.Add(this.btnDeliverySettings);
             this.pnlMyProDD.Controls.Add(this.btnPersonalInfo);
             this.pnlMyProDD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMyProDD.Location = new System.Drawing.Point(0, 91);
             this.pnlMyProDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMyProDD.Name = "pnlMyProDD";
-            this.pnlMyProDD.Size = new System.Drawing.Size(203, 160);
+            this.pnlMyProDD.Size = new System.Drawing.Size(203, 120);
             this.pnlMyProDD.TabIndex = 18;
             this.pnlMyProDD.Visible = false;
             // 
@@ -391,7 +389,7 @@
             this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 120);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 80);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
@@ -412,7 +410,7 @@
             this.btnMyOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.ForeColor = System.Drawing.Color.White;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 80);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 40);
             this.btnMyOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
@@ -421,27 +419,6 @@
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMyOrders.UseVisualStyleBackColor = false;
-            // 
-            // btnDeliverySettings
-            // 
-            this.btnDeliverySettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnDeliverySettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDeliverySettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeliverySettings.FlatAppearance.BorderSize = 0;
-            this.btnDeliverySettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnDeliverySettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnDeliverySettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeliverySettings.ForeColor = System.Drawing.Color.White;
-            this.btnDeliverySettings.Location = new System.Drawing.Point(0, 40);
-            this.btnDeliverySettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDeliverySettings.Name = "btnDeliverySettings";
-            this.btnDeliverySettings.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnDeliverySettings.Size = new System.Drawing.Size(203, 40);
-            this.btnDeliverySettings.TabIndex = 3;
-            this.btnDeliverySettings.Text = "Delivery Settings";
-            this.btnDeliverySettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeliverySettings.UseVisualStyleBackColor = false;
-            this.btnDeliverySettings.Click += new System.EventHandler(this.BtnDeliverySettings_Click);
             // 
             // btnPersonalInfo
             // 
@@ -639,7 +616,6 @@
         private System.Windows.Forms.Panel pnlMyProDD;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnDeliverySettings;
         private System.Windows.Forms.Button btnPersonalInfo;
         private System.Windows.Forms.Button btnMyPro;
         private System.Windows.Forms.Panel panel1;

@@ -23,7 +23,8 @@ namespace ResManaged3.UI
         private static CheckOut checkOut;
         private static DeliverySettings deliverySettings;
 
-        private User user;
+        private User user, trouser;
+
         public UserEnd()
         {
             InitializeComponent();
@@ -45,9 +46,13 @@ namespace ResManaged3.UI
             return user;
         }
 
-        public void UpdateUser(User user)
+        public void Print()
         {
-            this.user = user;
+            Console.WriteLine(trouser.Name);
+        }
+
+        public void UpdateName()
+        {
             Console.WriteLine(this.user.Name);
             lblNameOfUser.Text = this.user.Name;
         }
@@ -129,7 +134,7 @@ namespace ResManaged3.UI
 
         private void BtnCheckOut_Click(object sender, EventArgs e)
         {
-            checkOut = new CheckOut(user,this);
+            checkOut = new CheckOut(user,this,trouser);
 
             Contain(checkOut);
 

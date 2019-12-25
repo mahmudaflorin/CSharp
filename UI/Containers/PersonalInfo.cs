@@ -75,9 +75,9 @@ namespace ResManaged3.UI.Containers
                 newuser.UserType = 0;
                 PersonalInfoApp personalInfoApp = new PersonalInfoApp(newuser);
                 string msg = personalInfoApp.UpdateProfile();
-                user = newuser;
+                UpdateUserObject(newuser);
                 Console.WriteLine("aft "+user.Name);
-                userEnd.UpdateUser(newuser);
+                userEnd.UpdateName();
                 ShowMessage(msg);
 
                 
@@ -86,6 +86,19 @@ namespace ResManaged3.UI.Containers
             {
                 return;
             }
+        }
+
+        private void UpdateUserObject(User newuser)
+        {
+            user.UserName=newuser.UserName;
+            user.Name=newuser.Name;
+            user.Date=newuser.Date;
+            user.Gender=newuser.Gender;
+            user.Email=newuser.Email;
+            user.Mobile = newuser.Mobile;
+            user.Address = newuser.Address;
+            user.Password = newuser.Password;
+            user.UserType = newuser.UserType;
         }
 
         private bool Valid()
