@@ -173,6 +173,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm";
             this.Text = "PLand";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.specGroupBox1.ResumeLayout(false);
             this.specGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);

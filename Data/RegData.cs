@@ -87,5 +87,73 @@ namespace ResManaged3.Data
                 return msg;
             }
         }
+
+        public string UpdateProfile()
+        {
+            string msg = "";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                Console.WriteLine("1");
+                try
+                {
+                    Console.WriteLine("2");
+                    con.Open();
+
+                    bool exists = false;
+
+                    // create a command to check if the username exists
+                    using (SqlCommand cmd = new SqlCommand("select count(*) from [userTable] where username = @UserName", con))
+                    {
+                        cmd.Parameters.AddWithValue("UserName", user.UserName);
+                        exists = (int)cmd.ExecuteScalar() > 0;
+                    }
+                    Console.WriteLine("hh");
+                    if (exists)
+                    {
+                        Console.WriteLine("here");
+                        SqlCommand cmd = new SqlCommand("Update userTable set name= @name, dob= @dob, gender = @gender, email = @email, mobile = @mobile, address = @address where username = @username;" +
+                            "Update authTable set password = @password, usertype = @usertype where username = @username;", con);
+
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@username", user.UserName);
+
+                        cmd.Parameters.AddWithValue("@name", user.Name);
+                        cmd.Parameters.AddWithValue("@dob", user.Date);
+                        cmd.Parameters.AddWithValue("@gender", user.Gender);
+                        cmd.Parameters.AddWithValue("@email", user.Email);
+                        cmd.Parameters.AddWithValue("@mobile", user.Mobile);
+                        cmd.Parameters.AddWithValue("@address", user.Address);
+                        cmd.Parameters.AddWithValue("@password", user.Password);
+                        cmd.Parameters.AddWithValue("@usertype", user.UserType);
+
+
+
+
+
+                        cmd.ExecuteNonQuery();
+
+
+
+                        con.Close();
+                        msg = "Profile Updated Successfully";
+
+                    }
+                    else
+                    {
+                    }
+
+
+                    //Console.WriteLine("user Registred");
+                }
+                catch (Exception ex)
+                {
+                    msg = ex.Message;
+                    Console.WriteLine(ex.Message);
+                }
+                return msg;
+            }
+        }
     }
 }

@@ -67,6 +67,7 @@
     <Compile Include="App\CheckOutApp.cs" />
     <Compile Include="App\CartItemApp.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
+    <Compile Include="App\PersonalInfoApp.cs" />
     <Compile Include="App\RegApp.cs" />
     <Compile Include="App\User.cs" />
     <Compile Include="Data\AuthData.cs" />

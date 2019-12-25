@@ -18,8 +18,8 @@ namespace ResManaged3.UI
     public partial class UserEnd : Form
     {
 
-        private static MenuAllItems menuAllItems;
-        private static PersonalInfo personalInfo;
+        private  MenuAllItems menuAllItems;
+        private  static PersonalInfo personalInfo;
         private static CheckOut checkOut;
         private static DeliverySettings deliverySettings;
 
@@ -38,6 +38,18 @@ namespace ResManaged3.UI
         {
             this.user = user;
             lblNameOfUser.Text = user.Name;
+        }
+
+        public User GetUser()
+        {
+            return user;
+        }
+
+        public void UpdateUser(User user)
+        {
+            this.user = user;
+            Console.WriteLine(this.user.Name);
+            lblNameOfUser.Text = this.user.Name;
         }
 
         public void ShowDropDown(Panel pnlDD)
@@ -78,7 +90,7 @@ namespace ResManaged3.UI
         {
             if(personalInfo == null)
             {
-                personalInfo = new PersonalInfo();
+                personalInfo = new PersonalInfo(user,this);
                 Contain(personalInfo);
             }
             else
@@ -87,6 +99,10 @@ namespace ResManaged3.UI
             }
         }
 
+        public void BtnAllItemsInvoke()
+        {
+            BtnAllItems_Click(btnAllItems, new EventArgs());
+        }
         private void BtnAllItems_Click(object sender, EventArgs e)
         {
             if(menuAllItems!=null)
@@ -113,7 +129,7 @@ namespace ResManaged3.UI
 
         private void BtnCheckOut_Click(object sender, EventArgs e)
         {
-            checkOut = new CheckOut();
+            checkOut = new CheckOut(user,this);
 
             Contain(checkOut);
 

@@ -13,21 +13,20 @@ namespace ResManaged3.Data
     {
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
-        public static void InserOrdersDb()
+        public static void InserOrdersDb(User user)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into orderTable values ( @userID, @bill, @status, @instruction, @address, @mobile);", con);
+                SqlCommand cmd = new SqlCommand("Insert into orderTable values ( @userID, @bill, @status, @address, @mobile);", con);
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@userID", "");
+                cmd.Parameters.AddWithValue("@userID", user.UserName);
                 cmd.Parameters.AddWithValue("@bill", (float)CheckOutApp.CalculateTotalPrice());
                 cmd.Parameters.AddWithValue("@status", 0);
-                cmd.Parameters.AddWithValue("@instruction", "");
-                cmd.Parameters.AddWithValue("@address", "");
-                cmd.Parameters.AddWithValue("@mobile", "");
+                cmd.Parameters.AddWithValue("@address", user.Address);
+                cmd.Parameters.AddWithValue("@mobile", user.Mobile);
 
 
 
@@ -37,7 +36,6 @@ namespace ResManaged3.Data
 
 
 
-                //con.Open();
 
                 int id = Convert.ToInt32(cmd2.ExecuteScalar());
 

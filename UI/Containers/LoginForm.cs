@@ -64,5 +64,10 @@ namespace ResManaged3.UI.Containers
             userEnd.BringToFront();
             Application.Run(userEnd);
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

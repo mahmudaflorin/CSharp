@@ -63,9 +63,9 @@ namespace ResManaged3.App
             return totalPrice;
         }
 
-        public static void PlaceOrder()
+        public static void PlaceOrder(User user)
         {
-            Order.InserOrdersDb();
+            Order.InserOrdersDb(user);
         }
     }
 }

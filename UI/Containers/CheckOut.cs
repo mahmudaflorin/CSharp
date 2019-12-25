@@ -20,6 +20,9 @@ namespace ResManaged3.UI.Containers
         public static upd Upd;
         public static ClearCartDel clearCartDel;
 
+        private User user;
+        private UserEnd userEnd;
+
         public CheckOut()
         {
             InitializeComponent();
@@ -39,8 +42,11 @@ namespace ResManaged3.UI.Containers
 
             clearCartDel = ClearCart;
 
-            
-
+        }
+        public CheckOut(User user, UserEnd userEnd):this()
+        {
+            this.user = user;
+            this.userEnd = userEnd;
         }
 
         private void PopulateCart()
@@ -119,8 +125,11 @@ namespace ResManaged3.UI.Containers
 
         private void BtnConfirmOrder_Click(object sender, EventArgs e)
         {
-            CheckOutApp.PlaceOrder();
+            
+            CheckOutApp.PlaceOrder(user);
             BtnClearCart_Click(btnClearCart, new EventArgs());
+            MessageBox.Show("Order placed", "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            userEnd.BtnAllItemsInvoke();
         }
     }
 }
