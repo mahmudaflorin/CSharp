@@ -66,11 +66,13 @@
     <Compile Include="App\AuthApp.cs" />
     <Compile Include="App\CheckOutApp.cs" />
     <Compile Include="App\CartItemApp.cs" />
+    <Compile Include="App\ItemClass.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
     <Compile Include="App\PersonalInfoApp.cs" />
     <Compile Include="App\RegApp.cs" />
     <Compile Include="App\User.cs" />
     <Compile Include="Data\AuthData.cs" />
+    <Compile Include="Data\ItemData.cs" />
     <Compile Include="Data\Order.cs" />
     <Compile Include="Data\RegData.cs" />
     <Compile Include="Program.cs" />

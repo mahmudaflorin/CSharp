@@ -52,7 +52,7 @@ namespace ResManaged3.UI.Containers
             else
             {
                 Thread th = new Thread(ShowUserEnd);
-                //th.SetApartmentState(ApartmentState.STA);
+                th.SetApartmentState(ApartmentState.STA);
                 th.Start();
                 if (this.Parent.Parent is Landing)
                 {

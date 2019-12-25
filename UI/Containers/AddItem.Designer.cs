@@ -301,6 +301,7 @@
             this.btnCancelChanges.TabIndex = 11;
             this.btnCancelChanges.Text = "Cancel Changes";
             this.btnCancelChanges.UseVisualStyleBackColor = false;
+            this.btnCancelChanges.Click += new System.EventHandler(this.BtnCancelChanges_Click);
             // 
             // btnConfirmItem
             // 
@@ -318,6 +319,7 @@
             this.btnConfirmItem.TabIndex = 12;
             this.btnConfirmItem.Text = "Add Item";
             this.btnConfirmItem.UseVisualStyleBackColor = false;
+            this.btnConfirmItem.Click += new System.EventHandler(this.BtnConfirmItem_Click);
             // 
             // btnUpload
             // 
@@ -336,6 +338,7 @@
             this.btnUpload.TabIndex = 13;
             this.btnUpload.Text = "Upload Image for Item";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.BtnUpload_Click);
             // 
             // panel3
             // 

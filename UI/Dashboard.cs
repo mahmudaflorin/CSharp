@@ -19,6 +19,7 @@ namespace ResManaged3.UI
     {
 
         private User user, trouser;
+        private AddItem addItem;
 
         public Dashboard()
         {
@@ -78,8 +79,17 @@ namespace ResManaged3.UI
 
         private void BtnAddItems_Click(object sender, EventArgs e)
         {
-            AddItem addItem = new AddItem(this);
-            Contain(addItem);
+            if(addItem==null)
+            {
+                addItem = new AddItem(this);
+                Contain(addItem);
+
+            }
+            else
+            {
+                Contain(addItem);
+            }
+             
         }
 
         private void Contain(Control control)
