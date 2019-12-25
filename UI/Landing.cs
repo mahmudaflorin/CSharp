@@ -13,8 +13,8 @@ namespace ResManaged3.UI
 {
     public partial class Landing : Form
     {
-        static LoginForm loginForm;
-        static RegistrationForm registrationForm;
+        LoginForm loginForm;
+        RegistrationForm registrationForm;
 
         public Landing()
         {
@@ -25,6 +25,10 @@ namespace ResManaged3.UI
                 pnlLand.Controls.Add(loginForm);
                 pnlLand.Tag = loginForm;
                 loginForm.Show();
+            }
+            else
+            {
+                //Contain(loginForm);
             }
             registrationForm = new RegistrationForm();
         }
@@ -49,16 +53,5 @@ namespace ResManaged3.UI
             }
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-        private void BtnSignUp_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

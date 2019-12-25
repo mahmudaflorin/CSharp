@@ -48,14 +48,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlMyProDD = new System.Windows.Forms.Panel();
-            this.btnPaymentOpt = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMyOrders = new System.Windows.Forms.Button();
             this.btnDeliverySettings = new System.Windows.Forms.Button();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
             this.btnMyPro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUser = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNameOfUser = new System.Windows.Forms.Label();
             this.pnlNavBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCheckOut = new System.Windows.Forms.Button();
@@ -369,7 +369,7 @@
             // 
             // pnlMyProDD
             // 
-            this.pnlMyProDD.Controls.Add(this.btnPaymentOpt);
+            this.pnlMyProDD.Controls.Add(this.btnLogOut);
             this.pnlMyProDD.Controls.Add(this.btnMyOrders);
             this.pnlMyProDD.Controls.Add(this.btnDeliverySettings);
             this.pnlMyProDD.Controls.Add(this.btnPersonalInfo);
@@ -381,25 +381,26 @@
             this.pnlMyProDD.TabIndex = 18;
             this.pnlMyProDD.Visible = false;
             // 
-            // btnPaymentOpt
+            // btnLogOut
             // 
-            this.btnPaymentOpt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnPaymentOpt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPaymentOpt.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPaymentOpt.FlatAppearance.BorderSize = 0;
-            this.btnPaymentOpt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnPaymentOpt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnPaymentOpt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentOpt.ForeColor = System.Drawing.Color.White;
-            this.btnPaymentOpt.Location = new System.Drawing.Point(0, 120);
-            this.btnPaymentOpt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPaymentOpt.Name = "btnPaymentOpt";
-            this.btnPaymentOpt.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnPaymentOpt.Size = new System.Drawing.Size(203, 40);
-            this.btnPaymentOpt.TabIndex = 5;
-            this.btnPaymentOpt.Text = "Payment Options";
-            this.btnPaymentOpt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaymentOpt.UseVisualStyleBackColor = false;
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 120);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(203, 40);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
             // 
             // btnMyOrders
             // 
@@ -499,7 +500,7 @@
             // pnlUser
             // 
             this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.pnlUser.Controls.Add(this.label1);
+            this.pnlUser.Controls.Add(this.lblNameOfUser);
             this.pnlUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUser.Location = new System.Drawing.Point(0, 0);
             this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -507,19 +508,19 @@
             this.pnlUser.Size = new System.Drawing.Size(203, 50);
             this.pnlUser.TabIndex = 0;
             // 
-            // label1
+            // lblNameOfUser
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 50);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nafiz Fuad Siam";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNameOfUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.lblNameOfUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNameOfUser.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameOfUser.ForeColor = System.Drawing.Color.White;
+            this.lblNameOfUser.Location = new System.Drawing.Point(0, 0);
+            this.lblNameOfUser.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNameOfUser.Name = "lblNameOfUser";
+            this.lblNameOfUser.Size = new System.Drawing.Size(203, 50);
+            this.lblNameOfUser.TabIndex = 1;
+            this.lblNameOfUser.Text = "Nafiz Fuad Siam";
+            this.lblNameOfUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlNavBar
             // 
@@ -616,7 +617,7 @@
         private System.Windows.Forms.Panel pnlNavBar;
         private System.Windows.Forms.Panel pnlUser;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNameOfUser;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Panel pnlSupportDD;
         private System.Windows.Forms.Button button11;
@@ -636,7 +637,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlMyProDD;
-        private System.Windows.Forms.Button btnPaymentOpt;
+        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnMyOrders;
         private System.Windows.Forms.Button btnDeliverySettings;
         private System.Windows.Forms.Button btnPersonalInfo;

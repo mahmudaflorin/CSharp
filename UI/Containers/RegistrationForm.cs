@@ -44,6 +44,7 @@ namespace ResManaged3.UI.Containers
                 user.Email = tbEmail.Text.Trim();
                 user.Mobile = tbMobile.Text.Trim();
                 user.Address = tbAddress.Text.Trim();
+                user.Password = tbPassword.Text.Trim();
                 user.UserType = 0;
                 RegApp regApp = new RegApp(user);
                 string msg = regApp.CreateProfile();
@@ -82,6 +83,11 @@ namespace ResManaged3.UI.Containers
             if (tbEmail.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Email can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if(tbPassword.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Password can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if(!dtpUsed)

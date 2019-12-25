@@ -65,7 +65,7 @@ namespace ResManaged3.UI.Elements
             }
         }
 
-        static Button btnCheckOut;
+        public static Button btnCheckOut;
         public Item()
         {
             InitializeComponent();
@@ -90,20 +90,22 @@ namespace ResManaged3.UI.Elements
                     }
                 }
             }
+            Console.WriteLine("ll");
 
             CheckOutApp.AddItem(ItemID, Title, PriceTag);
 
             
-            //CheckOutApp.AddItem(itemApp);
 
-            //MenuAllItemsApp.itemList.Add(this);
             CountCartItem();
 
         }
 
         public static void CountCartItem()
         {
+            Console.WriteLine(CheckOutApp.TotalItems());
             btnCheckOut.Text = "( " + CheckOutApp.TotalItems() + " )    Check Out";
+            Console.WriteLine(btnCheckOut.Text);
+            btnCheckOut.Refresh();
         }
 
         private void PictureBox1_MouseEnter(object sender, EventArgs e)

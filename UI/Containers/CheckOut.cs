@@ -18,6 +18,7 @@ namespace ResManaged3.UI.Containers
         public static Label lblTotalPrice;
 
         public static upd Upd;
+        public static ClearCartDel clearCartDel;
 
         public CheckOut()
         {
@@ -31,9 +32,14 @@ namespace ResManaged3.UI.Containers
 
             PopulateCart();
 
-             Upd = this.UpdateTotalPrice;
+
+            Upd = this.UpdateTotalPrice;
 
             Upd.Invoke();
+
+            clearCartDel = ClearCart;
+
+            
 
         }
 
@@ -57,11 +63,16 @@ namespace ResManaged3.UI.Containers
             }
         }
 
+        public delegate void ClearCartDel();
+        public void ClearCart()
+        {
+            BtnClearCart_Click(btnClearCart, new EventArgs());
+        }
         private void BtnClearCart_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("ccc");
             panel3.Controls.Clear();
-            //TotalPrice = 0.00;
-            //lblPriceTotal.Text = "0.00";
+
             CheckOutApp.itemApps.Clear();
 
             UpdateCartButton();
@@ -105,10 +116,6 @@ namespace ResManaged3.UI.Containers
             btnCheckOut.Text = "( " + CheckOutApp.TotalItems() + " )    Check Out";
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnConfirmOrder_Click(object sender, EventArgs e)
         {

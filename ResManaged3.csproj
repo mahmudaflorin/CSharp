@@ -69,6 +69,7 @@
     <Compile Include="App\MenuAllItemsApp.cs" />
     <Compile Include="App\RegApp.cs" />
     <Compile Include="App\User.cs" />
+    <Compile Include="Data\AuthData.cs" />
     <Compile Include="Data\Order.cs" />
     <Compile Include="Data\RegData.cs" />
     <Compile Include="Program.cs" />

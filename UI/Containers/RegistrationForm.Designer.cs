@@ -82,6 +82,13 @@
             this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
             this.tbMobile = new ResManaged3.UI.CustomControls.TransTextBox();
             this.tbAddress = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.tbPassword = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -90,6 +97,7 @@
             this.panel21.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel31.SuspendLayout();
+            this.panel36.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -139,6 +147,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel21);
             this.flowLayoutPanel1.Controls.Add(this.panel26);
             this.flowLayoutPanel1.Controls.Add(this.panel31);
+            this.flowLayoutPanel1.Controls.Add(this.panel36);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 471);
@@ -682,6 +691,79 @@
             this.tbAddress.Size = new System.Drawing.Size(300, 23);
             this.tbAddress.TabIndex = 6;
             // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.White;
+            this.panel36.Controls.Add(this.tbPassword);
+            this.panel36.Controls.Add(this.label8);
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Controls.Add(this.panel38);
+            this.panel36.Controls.Add(this.panel39);
+            this.panel36.Controls.Add(this.panel40);
+            this.panel36.Location = new System.Drawing.Point(50, 612);
+            this.panel36.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(440, 77);
+            this.panel36.TabIndex = 13;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.tbPassword.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.tbPassword.Location = new System.Drawing.Point(125, 27);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(300, 23);
+            this.tbPassword.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label8.Location = new System.Drawing.Point(3, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 24);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Password";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel37.Location = new System.Drawing.Point(0, 1);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(1, 75);
+            this.panel37.TabIndex = 5;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel38.Location = new System.Drawing.Point(0, 0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(439, 1);
+            this.panel38.TabIndex = 4;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.LightGray;
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel39.Location = new System.Drawing.Point(0, 76);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(439, 1);
+            this.panel39.TabIndex = 1;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.LightGray;
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel40.Location = new System.Drawing.Point(439, 0);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(1, 77);
+            this.panel40.TabIndex = 0;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -705,6 +787,7 @@
             this.panel21.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
+            this.panel36.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -765,5 +848,12 @@
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel36;
+        private CustomControls.TransTextBox tbPassword;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel40;
     }
 }

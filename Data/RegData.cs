@@ -43,7 +43,8 @@ namespace ResManaged3.Data
                     if (!exists)
                     {
                         Console.WriteLine("here");
-                        SqlCommand cmd = new SqlCommand("Insert into userTable values ( @username, @name, @dob, @gender, @email, @mobile, @address , @usertype);", con);
+                        SqlCommand cmd = new SqlCommand("Insert into userTable values ( @username, @name, @dob, @gender, @email, @mobile, @address);" +
+                            "Insert into authTable values ( @username, @password, @usertype);", con);
 
                         cmd.CommandType = CommandType.Text;
 
@@ -54,6 +55,7 @@ namespace ResManaged3.Data
                         cmd.Parameters.AddWithValue("@email", user.Email);
                         cmd.Parameters.AddWithValue("@mobile", user.Mobile);
                         cmd.Parameters.AddWithValue("@address", user.Address);
+                        cmd.Parameters.AddWithValue("@password", user.Password);
                         cmd.Parameters.AddWithValue("@usertype", user.UserType);
 
 

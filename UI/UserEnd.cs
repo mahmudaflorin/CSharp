@@ -1,4 +1,7 @@
-﻿using ResManaged3.UI.Containers;
+﻿using ResManaged3.App;
+using ResManaged3.UI.Elements;
+
+using ResManaged3.UI.Containers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,27 +22,22 @@ namespace ResManaged3.UI
         private static PersonalInfo personalInfo;
         private static CheckOut checkOut;
         private static DeliverySettings deliverySettings;
+
+        private User user;
         public UserEnd()
         {
             InitializeComponent();
-            //Controls.SetChildIndex(btnCheckOut, 0);
+
             
             ShowDropDown(pnlMenuDD);
-            if(menuAllItems==null)
-            {
-                menuAllItems = new MenuAllItems();
-                pnlContainer.Controls.Add(menuAllItems);
-                pnlContainer.Tag = menuAllItems;
-                menuAllItems.Show();
-            }
+            BtnAllItems_Click(btnAllItems, new EventArgs());
 
+        }
 
-            BtnDeliverySettings_Click(btnPersonalInfo, new EventArgs());
-            //form3 = new Form3();
-            // pnlContainer.Controls.Add(form3);
-            //pnlContainer.Tag = form3;
-            // form3.Show();
-
+        public UserEnd(User user) : this()
+        {
+            this.user = user;
+            lblNameOfUser.Text = user.Name;
         }
 
         public void ShowDropDown(Panel pnlDD)
@@ -94,7 +93,11 @@ namespace ResManaged3.UI
             {
                 Contain(menuAllItems);
             }
-            //this.Controls.SetChildIndex(btnCheckOut, 0);
+            else if (menuAllItems == null)
+            {
+                menuAllItems = new MenuAllItems();
+                Contain(menuAllItems);
+            }
         }
 
         private void Contain(Control control)
@@ -111,10 +114,10 @@ namespace ResManaged3.UI
         private void BtnCheckOut_Click(object sender, EventArgs e)
         {
             checkOut = new CheckOut();
-            Contain(checkOut);
-           
-            //Contain(checkOut);
 
+            Contain(checkOut);
+
+            
         }
 
         private void BtnDeliverySettings_Click(object sender, EventArgs e)
@@ -134,6 +137,44 @@ namespace ResManaged3.UI
         {
             Application.Exit();
             base.OnFormClosing(e);
+        }
+
+        private void BtnLogOut_Click(object sender, EventArgs e)
+        {
+            StaticClear();
+            Thread th = new Thread(ShowLanding);
+            //th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+            this.Close();
+        }
+
+        void ShowLanding()
+        {
+            Landing landing = new Landing();
+            Application.Run(landing);
+        }
+
+        void StaticClear()
+        {
+
+            CheckOutApp.itemApps.Clear();
+            CheckOut.TotalPrice = 0;
+            if(CheckOut.lblTotalPrice!=null)
+            {
+                CheckOut.lblTotalPrice.Text = "0.00";
+
+            }
+            if(Item.btnCheckOut!=null)
+            {
+                Item.btnCheckOut = null;
+            }
+            btnCheckOut.Text = "( " + CheckOutApp.TotalItems() + " )    Check Out";
+            user = null;
+            menuAllItems = null;
+            personalInfo = null;
+            checkOut = null;
+            //CheckOut.clearCartDel.Invoke();
+            deliverySettings = null;
         }
     }
 }
