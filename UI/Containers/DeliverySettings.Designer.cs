@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.pnlDelAdd = new System.Windows.Forms.Panel();
-            this.transTextBox1 = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.transTextBox2 = new ResManaged3.UI.CustomControls.TransTextBox();
@@ -53,23 +51,25 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDelAdd = new System.Windows.Forms.Panel();
+            this.transTextBox1 = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel16.SuspendLayout();
-            this.pnlDelAdd.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel22.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.pnlDelAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel16
@@ -91,133 +91,113 @@
             this.panel16.Size = new System.Drawing.Size(700, 350);
             this.panel16.TabIndex = 1;
             // 
-            // panel19
+            // panel21
             // 
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel19.Location = new System.Drawing.Point(553, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(130, 558);
-            this.panel19.TabIndex = 0;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(130, 539);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(423, 19);
+            this.panel21.TabIndex = 13;
             // 
-            // panel20
+            // panel22
             // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(130, 558);
-            this.panel20.TabIndex = 2;
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.Controls.Add(this.comboBox1);
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.label3);
+            this.panel22.Controls.Add(this.panel24);
+            this.panel22.Controls.Add(this.panel25);
+            this.panel22.Controls.Add(this.panel26);
+            this.panel22.Controls.Add(this.panel27);
+            this.panel22.Controls.Add(this.panel28);
+            this.panel22.Controls.Add(this.panel29);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(130, 468);
+            this.panel22.Margin = new System.Windows.Forms.Padding(0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(423, 71);
+            this.panel22.TabIndex = 12;
             // 
-            // pnlDelAdd
+            // comboBox1
             // 
-            this.pnlDelAdd.BackColor = System.Drawing.Color.White;
-            this.pnlDelAdd.Controls.Add(this.transTextBox1);
-            this.pnlDelAdd.Controls.Add(this.panel6);
-            this.pnlDelAdd.Controls.Add(this.label1);
-            this.pnlDelAdd.Controls.Add(this.panel5);
-            this.pnlDelAdd.Controls.Add(this.panel4);
-            this.pnlDelAdd.Controls.Add(this.panel2);
-            this.pnlDelAdd.Controls.Add(this.panel3);
-            this.pnlDelAdd.Controls.Add(this.panel17);
-            this.pnlDelAdd.Controls.Add(this.panel18);
-            this.pnlDelAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDelAdd.Location = new System.Drawing.Point(130, 0);
-            this.pnlDelAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlDelAdd.Name = "pnlDelAdd";
-            this.pnlDelAdd.Size = new System.Drawing.Size(423, 215);
-            this.pnlDelAdd.TabIndex = 8;
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(153, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(245, 25);
+            this.comboBox1.TabIndex = 10;
             // 
-            // transTextBox1
+            // panel23
             // 
-            this.transTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.transTextBox1.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.transTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.transTextBox1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.transTextBox1.Location = new System.Drawing.Point(153, 20);
-            this.transTextBox1.Multiline = true;
-            this.transTextBox1.Name = "transTextBox1";
-            this.transTextBox1.Size = new System.Drawing.Size(245, 158);
-            this.transTextBox1.TabIndex = 6;
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel23.Location = new System.Drawing.Point(398, 20);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(24, 29);
+            this.panel23.TabIndex = 9;
             // 
-            // panel6
+            // label3
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(398, 20);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(24, 158);
-            this.panel6.TabIndex = 9;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label3.Location = new System.Drawing.Point(1, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 29);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Payment Method";
             // 
-            // label1
+            // panel24
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(1, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 158);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "DeliveryAddress ";
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(1, 1);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(421, 19);
+            this.panel24.TabIndex = 8;
             // 
-            // panel5
+            // panel25
             // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(1, 1);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(421, 19);
-            this.panel5.TabIndex = 8;
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel25.Location = new System.Drawing.Point(1, 49);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(421, 21);
+            this.panel25.TabIndex = 7;
             // 
-            // panel4
+            // panel26
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(1, 178);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(421, 36);
-            this.panel4.TabIndex = 7;
+            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel26.Location = new System.Drawing.Point(0, 1);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(1, 69);
+            this.panel26.TabIndex = 5;
             // 
-            // panel2
+            // panel27
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 213);
-            this.panel2.TabIndex = 5;
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel27.Location = new System.Drawing.Point(0, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(422, 1);
+            this.panel27.TabIndex = 4;
             // 
-            // panel3
+            // panel28
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(422, 1);
-            this.panel3.TabIndex = 4;
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel28.Location = new System.Drawing.Point(0, 70);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(422, 1);
+            this.panel28.TabIndex = 1;
             // 
-            // panel17
+            // panel29
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel17.Location = new System.Drawing.Point(0, 214);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(422, 1);
-            this.panel17.TabIndex = 1;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel18.Location = new System.Drawing.Point(422, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(1, 215);
-            this.panel18.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(130, 215);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 19);
-            this.panel1.TabIndex = 9;
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel29.Location = new System.Drawing.Point(422, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(1, 71);
+            this.panel29.TabIndex = 0;
             // 
             // panel7
             // 
@@ -331,104 +311,133 @@
             this.panel15.Size = new System.Drawing.Size(1, 215);
             this.panel15.TabIndex = 0;
             // 
-            // panel21
+            // panel1
             // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(130, 539);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(423, 19);
-            this.panel21.TabIndex = 13;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(130, 215);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(423, 19);
+            this.panel1.TabIndex = 9;
             // 
-            // panel22
+            // pnlDelAdd
             // 
-            this.panel22.BackColor = System.Drawing.Color.White;
-            this.panel22.Controls.Add(this.comboBox1);
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Controls.Add(this.label3);
-            this.panel22.Controls.Add(this.panel24);
-            this.panel22.Controls.Add(this.panel25);
-            this.panel22.Controls.Add(this.panel26);
-            this.panel22.Controls.Add(this.panel27);
-            this.panel22.Controls.Add(this.panel28);
-            this.panel22.Controls.Add(this.panel29);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(130, 468);
-            this.panel22.Margin = new System.Windows.Forms.Padding(0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(423, 71);
-            this.panel22.TabIndex = 12;
+            this.pnlDelAdd.BackColor = System.Drawing.Color.White;
+            this.pnlDelAdd.Controls.Add(this.transTextBox1);
+            this.pnlDelAdd.Controls.Add(this.panel6);
+            this.pnlDelAdd.Controls.Add(this.label1);
+            this.pnlDelAdd.Controls.Add(this.panel5);
+            this.pnlDelAdd.Controls.Add(this.panel4);
+            this.pnlDelAdd.Controls.Add(this.panel2);
+            this.pnlDelAdd.Controls.Add(this.panel3);
+            this.pnlDelAdd.Controls.Add(this.panel17);
+            this.pnlDelAdd.Controls.Add(this.panel18);
+            this.pnlDelAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDelAdd.Location = new System.Drawing.Point(130, 0);
+            this.pnlDelAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDelAdd.Name = "pnlDelAdd";
+            this.pnlDelAdd.Size = new System.Drawing.Size(423, 215);
+            this.pnlDelAdd.TabIndex = 8;
             // 
-            // panel23
+            // transTextBox1
             // 
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel23.Location = new System.Drawing.Point(398, 20);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(24, 29);
-            this.panel23.TabIndex = 9;
+            this.transTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transTextBox1.BottomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.transTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.transTextBox1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.transTextBox1.Location = new System.Drawing.Point(153, 20);
+            this.transTextBox1.Multiline = true;
+            this.transTextBox1.Name = "transTextBox1";
+            this.transTextBox1.Size = new System.Drawing.Size(245, 158);
+            this.transTextBox1.TabIndex = 6;
             // 
-            // label3
+            // panel6
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(1, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Payment Method";
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(398, 20);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(24, 158);
+            this.panel6.TabIndex = 9;
             // 
-            // panel24
+            // label1
             // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(1, 1);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(421, 19);
-            this.panel24.TabIndex = 8;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(1, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 158);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "DeliveryAddress ";
             // 
-            // panel25
+            // panel5
             // 
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel25.Location = new System.Drawing.Point(1, 49);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(421, 21);
-            this.panel25.TabIndex = 7;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(1, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(421, 19);
+            this.panel5.TabIndex = 8;
             // 
-            // panel26
+            // panel4
             // 
-            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel26.Location = new System.Drawing.Point(0, 1);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(1, 69);
-            this.panel26.TabIndex = 5;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(1, 178);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(421, 36);
+            this.panel4.TabIndex = 7;
             // 
-            // panel27
+            // panel2
             // 
-            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(0, 0);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(422, 1);
-            this.panel27.TabIndex = 4;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 213);
+            this.panel2.TabIndex = 5;
             // 
-            // panel28
+            // panel3
             // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel28.Location = new System.Drawing.Point(0, 70);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(422, 1);
-            this.panel28.TabIndex = 1;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(422, 1);
+            this.panel3.TabIndex = 4;
             // 
-            // panel29
+            // panel17
             // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel29.Location = new System.Drawing.Point(422, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(1, 71);
-            this.panel29.TabIndex = 0;
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(0, 214);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(422, 1);
+            this.panel17.TabIndex = 1;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel18.Location = new System.Drawing.Point(422, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(1, 215);
+            this.panel18.TabIndex = 0;
+            // 
+            // panel20
+            // 
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(130, 558);
+            this.panel20.TabIndex = 2;
+            // 
+            // panel19
+            // 
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel19.Location = new System.Drawing.Point(553, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(130, 558);
+            this.panel19.TabIndex = 0;
             // 
             // button1
             // 
@@ -462,15 +471,6 @@
             this.btnPersonalInfo.Text = "Cancel Changes";
             this.btnPersonalInfo.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 25);
-            this.comboBox1.TabIndex = 10;
-            // 
             // DeliverySettings
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -487,9 +487,9 @@
             this.Text = "OrderState";
             this.Load += new System.EventHandler(this.DeliverySettings_Load);
             this.panel16.ResumeLayout(false);
-            this.pnlDelAdd.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.pnlDelAdd.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

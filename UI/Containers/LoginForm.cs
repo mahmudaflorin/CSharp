@@ -21,6 +21,7 @@ namespace ResManaged3.UI.Containers
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
+
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)
@@ -40,7 +41,9 @@ namespace ResManaged3.UI.Containers
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
+            //AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
+            AuthApp authApp = new AuthApp("nfsiam", "1234");//bypass
+
             user = authApp.GetProfile();
             if(user==null)
             {
@@ -51,7 +54,7 @@ namespace ResManaged3.UI.Containers
                 Thread th = new Thread(ShowUserEnd);
                 //th.SetApartmentState(ApartmentState.STA);
                 th.Start();
-                if(this.Parent.Parent is Landing)
+                if (this.Parent.Parent is Landing)
                 {
                     (this.Parent.Parent as Landing).Close();
                 }
@@ -60,13 +63,23 @@ namespace ResManaged3.UI.Containers
 
         void ShowUserEnd()
         {
-            UserEnd userEnd = new UserEnd(user);
-            userEnd.BringToFront();
-            Application.Run(userEnd);
+            if (user.UserType.Equals(0))
+            {
+                UserEnd userEnd = new UserEnd(user);
+                userEnd.BringToFront();
+                Application.Run(userEnd);
+            }
+            else if(user.UserType.Equals(1))
+            {
+                Dashboard dashboard = new Dashboard(user);
+                dashboard.BringToFront();
+                Application.Run(dashboard);
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            //BtnLogin_Click(btnLogin, new EventArgs());//bypass
 
         }
     }
