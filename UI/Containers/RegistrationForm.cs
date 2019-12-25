@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ResManaged3.App;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace ResManaged3.UI.Containers
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
+
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -28,6 +30,118 @@ namespace ResManaged3.UI.Containers
                 Landing landing = this.Parent.Parent as Landing;
                 landing.Contain(landing.GetLoginForm());
             }
+        }
+
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            if(Valid())
+            {
+                User user = new User();
+                user.UserName = tbUserName.Text.Trim();
+                user.Name = tbName.Text.Trim();
+                user.Date = dateTimePicker1.Value;
+                user.Gender = GetGender();
+                user.Email = tbEmail.Text.Trim();
+                user.Mobile = tbMobile.Text.Trim();
+                user.Address = tbAddress.Text.Trim();
+                user.UserType = 0;
+                RegApp regApp = new RegApp(user);
+                string msg = regApp.CreateProfile();
+                ShowMessage(msg);
+                ResetSubmission();
+                BtnBack_Click(btnBack, new EventArgs());
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private bool Valid()
+        {
+            if(tbUserName.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Username can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if(tbName.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Name can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (tbAddress.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Address can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (tbMobile.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Mobile Number can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (tbEmail.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Email can not be empty", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if(!dtpUsed)
+            {
+                MessageBox.Show("Date of birth have to be selected", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if(rbF.Checked==false && rbM.Checked == false && rbO.Checked == false)
+            {
+                MessageBox.Show("Gender have to be selected", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private int GetGender()
+        {
+            if (rbM.Checked)
+                return 1;
+            else if (rbF.Checked)
+                return 2;
+            else if (rbO.Checked)
+                return 3;
+            else
+                return 0;
+        }
+
+        private bool dtpUsed = false;
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dtpUsed = true;
+        }
+
+        private void ShowMessage(string msg)
+        {
+            if(msg.Equals("Profile Created Successfully"))
+            {
+                MessageBox.Show(msg, "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if(msg.Equals("Username is not available"))
+            {
+                MessageBox.Show(msg, "Opps!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(msg, "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ResetSubmission()
+        {
+            tbUserName.ResetText();
+            tbName.ResetText();
+            dateTimePicker1.ResetText();
+            rbF.Checked = false; rbO.Checked = false; rbM.Checked = false;
+            tbEmail.ResetText();
+            tbMobile.ResetText();
+            tbAddress.ResetText();
         }
     }
 }

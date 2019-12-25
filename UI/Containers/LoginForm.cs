@@ -29,5 +29,10 @@ namespace ResManaged3.UI.Containers
                 landing.Contain(landing.GetRegForm());
             }
         }
+
+        private void TbUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
