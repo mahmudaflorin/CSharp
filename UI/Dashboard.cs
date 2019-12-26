@@ -20,6 +20,7 @@ namespace ResManaged3.UI
 
         private User user, trouser;
         private AddItem addItem;
+        private PendingOrders pendingOrders;
 
         public Dashboard()
         {
@@ -101,6 +102,12 @@ namespace ResManaged3.UI
                 pnlContainer.Tag = control;
                 control.Show();
             }
+        }
+
+        private void BtnPendingOrders_Click(object sender, EventArgs e)
+        {
+            pendingOrders = new PendingOrders();
+            Contain(pendingOrders);
         }
 
         public void HideDropDown()

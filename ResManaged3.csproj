@@ -107,6 +107,12 @@
     <Compile Include="UI\Containers\DeliverySettings.Designer.cs">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Containers\PendingOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\PendingOrders.Designer.cs">
+      <DependentUpon>PendingOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Containers\PersonalInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="UI\Elements\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Elements\OrderPalette.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\OrderPalette.Designer.cs">
+      <DependentUpon>OrderPalette.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Landing.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,9 @@
     <EmbeddedResource Include="UI\Containers\DeliverySettings.resx">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\PendingOrders.resx">
+      <DependentUpon>PendingOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\PersonalInfo.resx">
       <DependentUpon>PersonalInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Elements\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\OrderPalette.resx">
+      <DependentUpon>OrderPalette.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>
@@ -229,6 +247,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ResM.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Untitled-5png.png" />
     <Content Include="UI\Resources\cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

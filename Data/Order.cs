@@ -49,7 +49,7 @@ namespace ResManaged3.Data
                     cmd3.CommandType = CommandType.Text;
 
                     cmd3.Parameters.AddWithValue("@orderID", id);
-                    cmd3.Parameters.AddWithValue("@itemCode", cartItemApp.ItemCode);
+                    cmd3.Parameters.AddWithValue("@itemCode", Convert.ToInt32(cartItemApp.ItemCode));
                     cmd3.Parameters.AddWithValue("@quantity", cartItemApp.Quantity);
                   
 

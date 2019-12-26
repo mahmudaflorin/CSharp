@@ -41,8 +41,8 @@ namespace ResManaged3.UI.Containers
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
-            AuthApp authApp = new AuthApp("nfsiam", "1234");//bypass
+            AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
+            //AuthApp authApp = new AuthApp("nfsiam", "1234");//bypass
 
             user = authApp.GetProfile();
             if(user==null)

@@ -19,6 +19,7 @@ namespace ResManaged3.UI
         public Landing()
         {
             InitializeComponent();
+            this.Text = "ResManaged";
             if (loginForm == null)
             {
                 loginForm = new LoginForm();

@@ -14,6 +14,7 @@ namespace ResManaged3.Data
     class ItemData
     {
         ItemClass itemClass;
+        List<ItemApp> itemAppList;
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
         public ItemData(ItemClass itemClass)
@@ -21,6 +22,11 @@ namespace ResManaged3.Data
             this.itemClass = itemClass;
 
             
+        }
+
+        public ItemData(List<ItemApp> itemAppList)
+        {
+            this.itemAppList = itemAppList;
         }
 
         public string AddItem()
@@ -68,6 +74,44 @@ namespace ResManaged3.Data
                 }
                 return msg;
             }
+        }
+
+        public List<ItemApp> GetItemApps()
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from itemTable", con);
+
+                cmd.CommandType = CommandType.Text;
+
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ItemApp itemApp = new ItemApp();
+
+                    itemApp.ItemID = Convert.ToInt32(reader[0]);
+
+                    byte[] myImage = new byte[0];
+                    myImage = (byte[])reader[1];
+                    MemoryStream stream = new MemoryStream(myImage);
+                    itemApp.ImageFile = Image.FromStream(stream);
+
+                    itemApp.Title = reader[2].ToString();
+                    itemApp.Description = reader[3].ToString();
+                    itemApp.PriceTag = Convert.ToDouble(reader[4]);
+
+                    itemAppList.Add(itemApp);
+                    
+                }
+
+                reader.Close();
+                con.Close();
+
+            }
+            return itemAppList;
         }
 
     }

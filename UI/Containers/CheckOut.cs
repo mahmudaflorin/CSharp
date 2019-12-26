@@ -43,12 +43,10 @@ namespace ResManaged3.UI.Containers
             clearCartDel = ClearCart;
 
         }
-        public CheckOut(User user, UserEnd userEnd, User trouser):this()
+        public CheckOut(User user, UserEnd userEnd):this()
         {
             this.user = user;
             this.userEnd = userEnd;
-            trouser = user;
-            userEnd.Print();
         }
 
         private void PopulateCart()

@@ -46,10 +46,7 @@ namespace ResManaged3.UI
             return user;
         }
 
-        public void Print()
-        {
-            Console.WriteLine(trouser.Name);
-        }
+
 
         public void UpdateName()
         {
@@ -134,7 +131,7 @@ namespace ResManaged3.UI
 
         private void BtnCheckOut_Click(object sender, EventArgs e)
         {
-            checkOut = new CheckOut(user,this,trouser);
+            checkOut = new CheckOut(user,this);
 
             Contain(checkOut);
 

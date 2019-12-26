@@ -32,7 +32,8 @@ namespace ResManaged3.UI.Containers
             foreach(ItemApp itemApp in itemAppList)
             {
                 Item item = new Item();
-                item.ItemID = itemApp.ItemID;
+                item.FoodPic = itemApp.ImageFile;
+                item.ItemID = itemApp.ItemID.ToString();
                 item.Title = itemApp.Title;
                 item.Description = itemApp.Description;
                 item.PriceTag = itemApp.PriceTag.ToString();
