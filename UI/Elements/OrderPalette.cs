@@ -50,6 +50,12 @@ namespace ResManaged3.UI.Elements
             set { lblItems.Text = value; }
         }
 
+        public string UserName
+        {
+            get { return lblUsername.Text; }
+            set { lblUsername.Text = value; }
+        }
+
         public string AddPhn
         {
             get { return lblAddPhn.Text; }
@@ -83,7 +89,7 @@ namespace ResManaged3.UI.Elements
 
 
                 //cmd.Parameters.AddWithValue("@BorrowerID", textBox1.Text);
-                cmd.Parameters.AddWithValue("@status", 1);
+                cmd.Parameters.AddWithValue("@status", status);
                 cmd.Parameters.AddWithValue("@orderID", OrderID);
 
                

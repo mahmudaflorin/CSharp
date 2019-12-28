@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4025A8D9-FDE4-46A1-8A7E-21C73B624C6D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>ResManaged3</RootNamespace>
     <AssemblyName>ResManaged3</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -77,6 +77,12 @@
     <Compile Include="Data\RegData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Containers\ModifyItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\ModifyItem.Designer.cs">
+      <DependentUpon>ModifyItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Containers\AddItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="UI\Containers\DeliverySettings.Designer.cs">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\ShowAllItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\ShowAllItem.Designer.cs">
+      <DependentUpon>ShowAllItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Containers\PendingOrders.cs">
       <SubType>Form</SubType>
@@ -177,6 +189,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Containers\ModifyItem.resx">
+      <DependentUpon>ModifyItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\DeliverySettings.resx">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\ShowAllItem.resx">
+      <DependentUpon>ShowAllItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\PendingOrders.resx">
       <DependentUpon>PendingOrders.cs</DependentUpon>

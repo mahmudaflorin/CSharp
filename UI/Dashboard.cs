@@ -21,13 +21,18 @@ namespace ResManaged3.UI
         private User user, trouser;
         private AddItem addItem;
         private PendingOrders pendingOrders;
+        private ModifyItem removeItem;
+        private MenuAllItems menuAllItems;
+        private ShowAllItem showAllItem;
 
         public Dashboard()
         {
             InitializeComponent();
 
-            ShowDropDown(pnlManageMenuDD);
-            BtnAddItems_Click(btnAddItems, new EventArgs());
+            ShowDropDown(pnlManageOrdersDD);
+            //BtnAddItems_Click(btnAddItems, new EventArgs());
+            BtnPendingOrders_Click(btnAddItems, new EventArgs());
+
         }
 
         public Dashboard(User user) : this()
@@ -108,6 +113,21 @@ namespace ResManaged3.UI
         {
             pendingOrders = new PendingOrders();
             Contain(pendingOrders);
+        }
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            if(removeItem==null)
+            {
+                removeItem = new ModifyItem();
+            }
+            Contain(removeItem);
+        }
+
+        private void BtnAllItem_Click(object sender, EventArgs e)
+        {
+            showAllItem = new ShowAllItem();
+            Contain(showAllItem);
         }
 
         public void HideDropDown()

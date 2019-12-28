@@ -42,6 +42,7 @@ namespace ResManaged3.UI.Containers
                 {
                     OrderPalette orderPalette = new OrderPalette();
                     orderPalette.OrderID = Convert.ToInt32(reader[0]);
+                    orderPalette.UserName = reader[1].ToString();
                     orderPalette.Bill = (double)reader[2];
                     orderPalette.AddPhn = reader[4].ToString()+", "+reader[5].ToString();
                     orderPalette.Items = GetItemInfo(orderPalette.OrderID);
@@ -78,7 +79,8 @@ namespace ResManaged3.UI.Containers
                     //str = reader[1].ToString() 
                     int itemID = (int)reader[1];
                     string inem = GetItemName(itemID);
-                    str = str + inem + "  [ QTY:" + reader[2].ToString() + " ]  ";
+                    str = str + inem + "  [ " + reader[2].ToString() + " ],  ";
+                    
                 }
 
                 reader.Close();

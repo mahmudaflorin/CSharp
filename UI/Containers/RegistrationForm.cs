@@ -49,8 +49,8 @@ namespace ResManaged3.UI.Containers
                 RegApp regApp = new RegApp(user);
                 string msg = regApp.CreateProfile();
                 ShowMessage(msg);
-                ResetSubmission();
-                BtnBack_Click(btnBack, new EventArgs());
+                //ResetSubmission();
+                //BtnBack_Click(btnBack, new EventArgs());
             }
             else
             {
@@ -128,6 +128,8 @@ namespace ResManaged3.UI.Containers
             if(msg.Equals("Profile Created Successfully"))
             {
                 MessageBox.Show(msg, "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                ResetSubmission();
+                BtnBack_Click(btnBack, new EventArgs());
             }
             else if(msg.Equals("Username is not available"))
             {
@@ -148,6 +150,7 @@ namespace ResManaged3.UI.Containers
             tbEmail.ResetText();
             tbMobile.ResetText();
             tbAddress.ResetText();
+            tbPassword.ResetText();
         }
     }
 }
