@@ -32,7 +32,7 @@
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pnlManageOrdersDD = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
+            this.btnTakenOrders = new System.Windows.Forms.Button();
             this.btnPendingOrders = new System.Windows.Forms.Button();
             this.btnManageOrders = new System.Windows.Forms.Button();
             this.pnlSubMenuDiv2 = new System.Windows.Forms.Panel();
@@ -90,7 +90,7 @@
             // pnlManageOrdersDD
             // 
             this.pnlManageOrdersDD.Controls.Add(this.button11);
-            this.pnlManageOrdersDD.Controls.Add(this.btnFeedback);
+            this.pnlManageOrdersDD.Controls.Add(this.btnTakenOrders);
             this.pnlManageOrdersDD.Controls.Add(this.btnPendingOrders);
             this.pnlManageOrdersDD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManageOrdersDD.Location = new System.Drawing.Point(0, 453);
@@ -120,25 +120,26 @@
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // btnFeedback
+            // btnTakenOrders
             // 
-            this.btnFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeedback.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnFeedback.FlatAppearance.BorderSize = 0;
-            this.btnFeedback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeedback.ForeColor = System.Drawing.Color.White;
-            this.btnFeedback.Location = new System.Drawing.Point(0, 40);
-            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnFeedback.Size = new System.Drawing.Size(203, 40);
-            this.btnFeedback.TabIndex = 3;
-            this.btnFeedback.Text = "Give Feedback";
-            this.btnFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFeedback.UseVisualStyleBackColor = false;
+            this.btnTakenOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnTakenOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTakenOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnTakenOrders.FlatAppearance.BorderSize = 0;
+            this.btnTakenOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnTakenOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnTakenOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTakenOrders.ForeColor = System.Drawing.Color.White;
+            this.btnTakenOrders.Location = new System.Drawing.Point(0, 40);
+            this.btnTakenOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTakenOrders.Name = "btnTakenOrders";
+            this.btnTakenOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
+            this.btnTakenOrders.Size = new System.Drawing.Size(203, 40);
+            this.btnTakenOrders.TabIndex = 3;
+            this.btnTakenOrders.Text = "Taken Orders";
+            this.btnTakenOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakenOrders.UseVisualStyleBackColor = false;
+            this.btnTakenOrders.Click += new System.EventHandler(this.btnTakenOrders_Click);
             // 
             // btnPendingOrders
             // 
@@ -549,7 +550,7 @@
         private System.Windows.Forms.Label lblNameOfUser;
         private System.Windows.Forms.Panel pnlManageOrdersDD;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Button btnTakenOrders;
         private System.Windows.Forms.Button btnPendingOrders;
         private System.Windows.Forms.Button btnManageOrders;
         private System.Windows.Forms.Panel pnlSubMenuDiv2;

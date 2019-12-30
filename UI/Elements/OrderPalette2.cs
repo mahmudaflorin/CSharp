@@ -71,6 +71,23 @@ namespace ResManaged3.UI.Elements
             get { return lblAddPhn.Text; }
             set { lblAddPhn.Text = value; }
         }
+
+        public bool PendingTab
+        {
+            set
+            {
+                if(value)
+                {
+                    pnlButtons2.Visible = false;
+                    //Invalidate();
+                }
+                else
+                {
+                    pnlButtons.Visible = false;
+                }
+            }
+        }
+
         private void PnlBottom2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -123,6 +140,18 @@ namespace ResManaged3.UI.Elements
         private void btnReject_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDeliver_Click(object sender, EventArgs e)
+        {
+            Update(3);
+            this.Dispose();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Update(4);
+            this.Dispose();
         }
     }
 }

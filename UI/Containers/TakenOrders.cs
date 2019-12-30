@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace ResManaged3.UI.Containers
 {
-    public partial class PendingOrders : Form
+    public partial class TakenOrders : Form
     {
-        OrderApp orderApp;
+        OrderApp pendingItemApp;
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
-        public PendingOrders()
+        public TakenOrders()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
@@ -31,12 +31,12 @@ namespace ResManaged3.UI.Containers
 
         void ShowPendingOrders()
         {
-            if(orderApp==null)
+            if(pendingItemApp==null)
             {
-                orderApp = new OrderApp();
+                pendingItemApp = new OrderApp();
             }
             //PendingItemApp 
-            List<OrderPaletteApp> orderPaletteApps = orderApp.GetOrderPalettes(0);
+            List<OrderPaletteApp> orderPaletteApps = pendingItemApp.GetOrderPalettes(1);
 
             
             foreach(OrderPaletteApp orderPaletteApp in orderPaletteApps)
@@ -63,7 +63,7 @@ namespace ResManaged3.UI.Containers
                 }
 
                 orderPalette2.Items = labels;
-                orderPalette2.PendingTab = true;
+                orderPalette2.PendingTab = false;
                 //Control[] controls = orderPalette2.Controls.Find("pnlButtons2", true);
                 //controls[0] as Pa
 

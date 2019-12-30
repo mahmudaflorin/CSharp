@@ -69,7 +69,7 @@
     <Compile Include="App\ItemClass.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
     <Compile Include="App\OrderPaletteApp.cs" />
-    <Compile Include="App\PendingItemApp.cs" />
+    <Compile Include="App\OrderApp.cs" />
     <Compile Include="App\PersonalInfoApp.cs" />
     <Compile Include="App\RegApp.cs" />
     <Compile Include="App\User.cs" />
@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="UI\Containers\DeliverySettings.Designer.cs">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\TakenOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\TakenOrders.Designer.cs">
+      <DependentUpon>TakenOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Containers\ShowAllItem.cs">
       <SubType>Form</SubType>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\DeliverySettings.resx">
       <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\TakenOrders.resx">
+      <DependentUpon>TakenOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Containers\ShowAllItem.resx">
       <DependentUpon>ShowAllItem.cs</DependentUpon>

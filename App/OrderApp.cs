@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ResManaged3.App
 {
-    class PendingItemApp
+    class OrderApp
     {
-        public List<OrderPaletteApp> GetOrderPalettes()
+        public List<OrderPaletteApp> GetOrderPalettes(int status)
         {
             Order order = new Order();
-            List<OrderPaletteApp> orderPaletteApps = order.GetOrderPalettes();
+            List<OrderPaletteApp> orderPaletteApps = order.GetOrderPalettes(status);
             
             orderPaletteApps.Reverse();
 

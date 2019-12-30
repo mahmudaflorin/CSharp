@@ -130,6 +130,12 @@ namespace ResManaged3.UI
             Contain(showAllItem);
         }
 
+        private void btnTakenOrders_Click(object sender, EventArgs e)
+        {
+            TakenOrders takenOrders = new TakenOrders();
+            Contain(takenOrders);
+        }
+
         public void HideDropDown()
         {
             pnlManageEmployeesDD.Visible = false;
