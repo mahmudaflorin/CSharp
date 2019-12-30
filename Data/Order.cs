@@ -64,5 +64,109 @@ namespace ResManaged3.Data
             }
         }
 
+        #region PendingOrderOperations
+
+        public List<OrderPaletteApp> GetOrderPalettes ()
+        {
+            List<OrderPaletteApp> orderPaletteApps = new List<OrderPaletteApp>();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from orderTable where status = 0", con);
+
+                cmd.CommandType = CommandType.Text;
+
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    OrderPaletteApp orderPalette = new OrderPaletteApp();
+                    orderPalette.OrderID = Convert.ToInt32(reader[0]);
+                    //orderPalette.UserName = reader[1].ToString();
+                    orderPalette.Bill = (double)reader[2];
+                    orderPalette.AddPhn = reader[4].ToString() + ", " + reader[5].ToString();
+                    orderPalette.itemnames = GetItemInfo(orderPalette.OrderID);
+
+
+                    orderPaletteApps.Add(orderPalette);
+
+                }
+
+                reader.Close();
+                con.Close();
+
+            }
+
+            return orderPaletteApps;
+
+
+        }
+        public List<string> GetItemInfo(int id)
+        {
+            List<string> names = new List<string>();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                Console.WriteLine(id + ":\n");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from orderExtension where orderID = @orderID", con);
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@orderID", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string str = "";
+                    //str = reader[1].ToString() 
+                    int itemID = (int)reader[1];
+                    string inem = GetItemName(itemID);
+                    
+                    str = inem + " ( " + reader[2].ToString() + " )";
+                    //Console.WriteLine("#" + label.Text + "\n");
+
+                    //str = str + inem + "  [ " + reader[2].ToString() + " ],  ";
+                    names.Add(str);
+
+                }
+
+                reader.Close();
+                con.Close();
+
+            }
+            return names;
+        }
+
+        public string GetItemName(int id)
+        {
+            string str = "";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from itemTable where itemcode = @itemcode", con);
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@itemcode", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    str = reader[2].ToString();
+                }
+
+                reader.Close();
+                con.Close();
+
+            }
+            return str;
+        }
+
+        #endregion
     }
+
 }
+

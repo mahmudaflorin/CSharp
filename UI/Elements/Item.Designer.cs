@@ -108,7 +108,7 @@
             this.btnAddToCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(30, 240);
+            this.btnAddToCart.Location = new System.Drawing.Point(26, 240);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(150, 30);

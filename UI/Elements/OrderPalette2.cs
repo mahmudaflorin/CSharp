@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace ResManaged3.UI.Elements
 {
-    public partial class OrderPalette : UserControl
+    public partial class OrderPalette2 : UserControl
     {
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
-        public OrderPalette()
+        public OrderPalette2()
         {
             InitializeComponent();
         }
@@ -44,17 +44,27 @@ namespace ResManaged3.UI.Elements
             }
         }
 
-        public string Items
+        public List<Label> Items
         {
-            get { return lblItems.Text; }
-            set { lblItems.Text = value; }
+            ///get { return lblItems.Text; }
+            set
+            {
+                //Label label = new Label();
+                //label.Text = value;
+                //lblItems.Text = value;
+                foreach (Label label in value)
+                {
+                    flowLayoutPanel1.Controls.Add(label);
+                }
+
+            }
         }
 
-        public string UserName
-        {
-            get { return lblUsername.Text; }
-            set { lblUsername.Text = value; }
-        }
+        //public string UserName
+        //{
+        //    get { return lblUsername.Text; }
+        //    set { lblUsername.Text = value; }
+        //}
 
         public string AddPhn
         {
@@ -92,12 +102,27 @@ namespace ResManaged3.UI.Elements
                 cmd.Parameters.AddWithValue("@status", status);
                 cmd.Parameters.AddWithValue("@orderID", OrderID);
 
-               
+
 
                 cmd.ExecuteNonQuery();
                 con.Close();
 
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAccept_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReject_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

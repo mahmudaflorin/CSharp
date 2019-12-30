@@ -89,7 +89,7 @@
             this.panel1.Controls.Add(this.pnlBottom);
             this.panel1.Controls.Add(this.pnlLeft);
             this.panel1.Controls.Add(this.pnlTop);
-            this.panel1.Location = new System.Drawing.Point(506, 74);
+            this.panel1.Location = new System.Drawing.Point(506, 114);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 278);
             this.panel1.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.btnAddToCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(30, 240);
+            this.btnAddToCart.Location = new System.Drawing.Point(24, 240);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(150, 30);
@@ -136,7 +136,7 @@
             this.lblPriceTag.AutoSize = true;
             this.lblPriceTag.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriceTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.lblPriceTag.Location = new System.Drawing.Point(90, 219);
+            this.lblPriceTag.Location = new System.Drawing.Point(87, 219);
             this.lblPriceTag.Name = "lblPriceTag";
             this.lblPriceTag.Size = new System.Drawing.Size(36, 17);
             this.lblPriceTag.TabIndex = 4;
@@ -242,10 +242,10 @@
             this.panel13.Controls.Add(this.panel15);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel17);
-            this.panel13.Location = new System.Drawing.Point(21, 246);
+            this.panel13.Location = new System.Drawing.Point(21, 333);
             this.panel13.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(440, 57);
+            this.panel13.Size = new System.Drawing.Size(295, 57);
             this.panel13.TabIndex = 10;
             // 
             // tbPriceTag
@@ -256,7 +256,7 @@
             this.tbPriceTag.ForeColor = System.Drawing.Color.DimGray;
             this.tbPriceTag.Location = new System.Drawing.Point(125, 17);
             this.tbPriceTag.Name = "tbPriceTag";
-            this.tbPriceTag.Size = new System.Drawing.Size(300, 23);
+            this.tbPriceTag.Size = new System.Drawing.Size(163, 23);
             this.tbPriceTag.TabIndex = 6;
             this.tbPriceTag.TextChanged += new System.EventHandler(this.TbPriceTag_TextChanged);
             // 
@@ -286,7 +286,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(439, 1);
+            this.panel15.Size = new System.Drawing.Size(294, 1);
             this.panel15.TabIndex = 4;
             // 
             // panel16
@@ -295,14 +295,14 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel16.Location = new System.Drawing.Point(0, 56);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(439, 1);
+            this.panel16.Size = new System.Drawing.Size(294, 1);
             this.panel16.TabIndex = 1;
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(439, 0);
+            this.panel17.Location = new System.Drawing.Point(294, 0);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(1, 57);
             this.panel17.TabIndex = 0;
@@ -310,13 +310,13 @@
             // btnCancelChanges
             // 
             this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnCancelChanges.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancelChanges.FlatAppearance.BorderSize = 0;
             this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelChanges.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelChanges.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelChanges.Location = new System.Drawing.Point(267, 458);
+            this.btnCancelChanges.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelChanges.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnCancelChanges.Location = new System.Drawing.Point(266, 493);
             this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelChanges.Name = "btnCancelChanges";
             this.btnCancelChanges.Size = new System.Drawing.Size(200, 39);
@@ -332,9 +332,9 @@
             this.btnConfirmItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnConfirmItem.FlatAppearance.BorderSize = 0;
             this.btnConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmItem.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmItem.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmItem.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmItem.Location = new System.Drawing.Point(505, 458);
+            this.btnConfirmItem.Location = new System.Drawing.Point(505, 493);
             this.btnConfirmItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirmItem.Name = "btnConfirmItem";
             this.btnConfirmItem.Size = new System.Drawing.Size(200, 39);
@@ -346,17 +346,15 @@
             // btnUpload
             // 
             this.btnUpload.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnUpload.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(21, 330);
+            this.btnUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnUpload.Location = new System.Drawing.Point(322, 335);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(446, 51);
+            this.btnUpload.Size = new System.Drawing.Size(140, 57);
             this.btnUpload.TabIndex = 13;
             this.btnUpload.Text = "Upload Image for Item";
             this.btnUpload.UseVisualStyleBackColor = false;
@@ -372,7 +370,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(21, 179);
+            this.panel3.Location = new System.Drawing.Point(21, 260);
             this.panel3.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 57);
@@ -447,7 +445,7 @@
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel12);
-            this.panel8.Location = new System.Drawing.Point(21, 45);
+            this.panel8.Location = new System.Drawing.Point(21, 114);
             this.panel8.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(295, 57);
@@ -521,7 +519,7 @@
             this.panel18.Controls.Add(this.panel20);
             this.panel18.Controls.Add(this.panel21);
             this.panel18.Controls.Add(this.panel22);
-            this.panel18.Location = new System.Drawing.Point(21, 112);
+            this.panel18.Location = new System.Drawing.Point(21, 187);
             this.panel18.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(440, 57);
@@ -589,13 +587,13 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(85)))), ((int)(((byte)(35)))));
+            this.btnDelete.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Location = new System.Drawing.Point(21, 458);
+            this.btnDelete.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(85)))), ((int)(((byte)(35)))));
+            this.btnDelete.Location = new System.Drawing.Point(27, 493);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(200, 39);
@@ -607,14 +605,12 @@
             // btnLoad
             // 
             this.btnLoad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnLoad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnLoad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLoad.FlatAppearance.BorderSize = 0;
-            this.btnLoad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnLoad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(324, 45);
+            this.btnLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnLoad.Location = new System.Drawing.Point(324, 114);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(138, 57);
@@ -623,7 +619,7 @@
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
-            // RemoveItem
+            // ModifyItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -641,7 +637,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RemoveItem";
+            this.Name = "ModifyItem";
             this.Text = "AddItem";
             this.Load += new System.EventHandler(this.RemoveItem_Load);
             this.panel1.ResumeLayout(false);

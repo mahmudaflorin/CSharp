@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlColors = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlLand = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.pnlColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlColors.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +52,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 561);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 30F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(49, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ResManaged";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ResManaged3.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(77, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 201);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlColors
             // 
@@ -111,27 +132,6 @@
             this.pnlLand.Size = new System.Drawing.Size(565, 561);
             this.pnlLand.TabIndex = 9;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 30F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(49, 321);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 55);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ResManaged";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ResManaged3.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 201);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Landing
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -148,8 +148,8 @@
             this.Text = "Landing";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlColors.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlColors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

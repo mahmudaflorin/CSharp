@@ -1,4 +1,5 @@
-﻿using ResManaged3.UI.Elements;
+﻿using ResManaged3.App;
+using ResManaged3.UI.Elements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace ResManaged3.UI.Containers
 {
     public partial class PendingOrders : Form
     {
+        PendingItemApp pendingItemApp;
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
         public PendingOrders()
@@ -24,96 +26,49 @@ namespace ResManaged3.UI.Containers
             this.Dock = DockStyle.Fill;
 
 
-            PopulatePanel();
-        }
-        public void PopulatePanel()
-        {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select * from orderTable where status = 0", con);
-
-                cmd.CommandType = CommandType.Text;
-
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    OrderPalette orderPalette = new OrderPalette();
-                    orderPalette.OrderID = Convert.ToInt32(reader[0]);
-                    orderPalette.UserName = reader[1].ToString();
-                    orderPalette.Bill = (double)reader[2];
-                    orderPalette.AddPhn = reader[4].ToString()+", "+reader[5].ToString();
-                    orderPalette.Items = GetItemInfo(orderPalette.OrderID);
-
-                    orderPalette.Dock = DockStyle.Top;
-
-                    panel1.Controls.Add(orderPalette);
-
-                }
-
-                reader.Close();
-                con.Close();
-
-            }
-
-
-        }
-        public string GetItemInfo(int id)
-        {
-            string str = "";
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select * from orderExtension where orderID = @orderID", con);
-
-                cmd.CommandType = CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@orderID", id);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    //str = reader[1].ToString() 
-                    int itemID = (int)reader[1];
-                    string inem = GetItemName(itemID);
-                    str = str + inem + "  [ " + reader[2].ToString() + " ],  ";
-                    
-                }
-
-                reader.Close();
-                con.Close();
-
-            }
-            return str;
+            ShowPendingOrders();
         }
 
-        public string GetItemName(int id)
+        void ShowPendingOrders()
         {
-            string str = "";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            if(pendingItemApp==null)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select * from itemTable where itemcode = @itemcode", con);
+                pendingItemApp = new PendingItemApp();
+            }
+            //PendingItemApp 
+            List<OrderPaletteApp> orderPaletteApps = pendingItemApp.GetOrderPalettes();
 
-                cmd.CommandType = CommandType.Text;
+            
+            foreach(OrderPaletteApp orderPaletteApp in orderPaletteApps)
+            {
+                OrderPalette2 orderPalette2 = new OrderPalette2();
 
-                cmd.Parameters.AddWithValue("@itemcode", id);
+                orderPalette2.OrderID = orderPaletteApp.OrderID;
+                orderPalette2.Bill = orderPaletteApp.Bill;
+                orderPalette2.AddPhn = orderPaletteApp.AddPhn;
 
-                SqlDataReader reader = cmd.ExecuteReader();
+                List<Label> labels = new List<Label>();
 
-                while (reader.Read())
+                foreach(string str in orderPaletteApp.itemnames)
                 {
-                    str = reader[2].ToString();
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Margin = new Padding(3, 5, 3, 5);
+                    label.Padding = new Padding(3, 5, 3, 5);
+                    label.BackColor = Color.FromArgb(180, 52, 73, 85);
+                    label.ForeColor = Color.White;
+                    label.Font = new Font("Open Sans", 9);
+                    label.Text = str;
+                    labels.Add(label);
                 }
 
-                reader.Close();
-                con.Close();
+                orderPalette2.Items = labels;
+
+                orderPalette2.Dock = DockStyle.Top;
+
+                panel1.Controls.Add(orderPalette2);
 
             }
-            return str;
         }
 
     }

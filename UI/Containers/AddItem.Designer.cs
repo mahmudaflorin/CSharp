@@ -111,7 +111,7 @@
             this.btnAddToCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(30, 240);
+            this.btnAddToCart.Location = new System.Drawing.Point(25, 240);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(150, 30);
@@ -232,10 +232,10 @@
             this.panel13.Controls.Add(this.panel15);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel17);
-            this.panel13.Location = new System.Drawing.Point(18, 229);
+            this.panel13.Location = new System.Drawing.Point(39, 314);
             this.panel13.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(440, 57);
+            this.panel13.Size = new System.Drawing.Size(281, 57);
             this.panel13.TabIndex = 10;
             // 
             // label4
@@ -264,7 +264,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(439, 1);
+            this.panel15.Size = new System.Drawing.Size(280, 1);
             this.panel15.TabIndex = 4;
             // 
             // panel16
@@ -273,14 +273,14 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel16.Location = new System.Drawing.Point(0, 56);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(439, 1);
+            this.panel16.Size = new System.Drawing.Size(280, 1);
             this.panel16.TabIndex = 1;
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(439, 0);
+            this.panel17.Location = new System.Drawing.Point(280, 0);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(1, 57);
             this.panel17.TabIndex = 0;
@@ -288,12 +288,12 @@
             // btnCancelChanges
             // 
             this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnCancelChanges.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancelChanges.FlatAppearance.BorderSize = 0;
             this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelChanges.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelChanges.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelChanges.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelChanges.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
             this.btnCancelChanges.Location = new System.Drawing.Point(306, 494);
             this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelChanges.Name = "btnCancelChanges";
@@ -310,7 +310,7 @@
             this.btnConfirmItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnConfirmItem.FlatAppearance.BorderSize = 0;
             this.btnConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmItem.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmItem.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmItem.ForeColor = System.Drawing.Color.White;
             this.btnConfirmItem.Location = new System.Drawing.Point(512, 494);
             this.btnConfirmItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -324,17 +324,15 @@
             // btnUpload
             // 
             this.btnUpload.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnUpload.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(12, 329);
+            this.btnUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnUpload.Location = new System.Drawing.Point(333, 315);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(446, 44);
+            this.btnUpload.Size = new System.Drawing.Size(146, 57);
             this.btnUpload.TabIndex = 13;
             this.btnUpload.Text = "Upload Image for Item";
             this.btnUpload.UseVisualStyleBackColor = false;
@@ -350,7 +348,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(15, 162);
+            this.panel3.Location = new System.Drawing.Point(39, 205);
             this.panel3.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 57);
@@ -413,7 +411,7 @@
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel12);
-            this.panel8.Location = new System.Drawing.Point(15, 95);
+            this.panel8.Location = new System.Drawing.Point(39, 96);
             this.panel8.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(440, 57);
@@ -498,7 +496,7 @@
             this.tbPriceTag.ForeColor = System.Drawing.Color.DimGray;
             this.tbPriceTag.Location = new System.Drawing.Point(125, 17);
             this.tbPriceTag.Name = "tbPriceTag";
-            this.tbPriceTag.Size = new System.Drawing.Size(300, 23);
+            this.tbPriceTag.Size = new System.Drawing.Size(149, 23);
             this.tbPriceTag.TabIndex = 6;
             this.tbPriceTag.TextChanged += new System.EventHandler(this.TbPriceTag_TextChanged);
             // 

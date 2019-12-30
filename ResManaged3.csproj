@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4025A8D9-FDE4-46A1-8A7E-21C73B624C6D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>ResManaged3</RootNamespace>
     <AssemblyName>ResManaged3</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -68,6 +68,8 @@
     <Compile Include="App\CartItemApp.cs" />
     <Compile Include="App\ItemClass.cs" />
     <Compile Include="App\MenuAllItemsApp.cs" />
+    <Compile Include="App\OrderPaletteApp.cs" />
+    <Compile Include="App\PendingItemApp.cs" />
     <Compile Include="App\PersonalInfoApp.cs" />
     <Compile Include="App\RegApp.cs" />
     <Compile Include="App\User.cs" />
@@ -155,11 +157,11 @@
     <Compile Include="UI\Elements\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Elements\OrderPalette.cs">
+    <Compile Include="UI\Elements\OrderPalette2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Elements\OrderPalette.Designer.cs">
-      <DependentUpon>OrderPalette.cs</DependentUpon>
+    <Compile Include="UI\Elements\OrderPalette2.Designer.cs">
+      <DependentUpon>OrderPalette2.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Landing.cs">
       <SubType>Form</SubType>
@@ -225,8 +227,8 @@
     <EmbeddedResource Include="UI\Elements\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Elements\OrderPalette.resx">
-      <DependentUpon>OrderPalette.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Elements\OrderPalette2.resx">
+      <DependentUpon>OrderPalette2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>
