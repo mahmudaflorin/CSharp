@@ -29,17 +29,22 @@ namespace ResManaged3.UI.Containers
             ShowPendingOrders();
         }
 
-        void ShowPendingOrders()
+        async void ShowPendingOrders()
         {
             if(orderApp==null)
             {
                 orderApp = new OrderApp();
             }
             //PendingItemApp 
-            List<OrderPaletteApp> orderPaletteApps = orderApp.GetOrderPalettes(0);
+            //List<OrderPaletteApp> orderPaletteApps = orderApp.GetOrderPalettes(0);
+            Task<List<OrderPaletteApp>> task = new Task<List<OrderPaletteApp>>(orderApp.GetPendingOrderPalettes);
+            task.Start();
 
-            
-            foreach(OrderPaletteApp orderPaletteApp in orderPaletteApps)
+            List<OrderPaletteApp> orderPaletteApps = await task;
+
+
+
+            foreach (OrderPaletteApp orderPaletteApp in orderPaletteApps)
             {
                 OrderPalette2 orderPalette2 = new OrderPalette2();
 

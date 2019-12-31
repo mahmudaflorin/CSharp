@@ -51,6 +51,7 @@ namespace ResManaged3.UI.Containers
 
         private void PopulateCart()
         {
+            
             foreach (CartItemApp i in CheckOutApp.itemApps)
             {
                 CartItem cartItem = new CartItem();

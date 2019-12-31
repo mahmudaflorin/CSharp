@@ -243,6 +243,7 @@
             this.btnReject.TabIndex = 8;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = false;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click_2);
             // 
             // btnAccept
             // 
@@ -260,6 +261,7 @@
             this.btnAccept.TabIndex = 6;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_2);
             // 
             // pnlButtons2
             // 

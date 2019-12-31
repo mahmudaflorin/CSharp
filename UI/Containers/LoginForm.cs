@@ -41,9 +41,11 @@ namespace ResManaged3.UI.Containers
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
-            AuthApp authApp = new AuthApp("nfsiam", "1234");//bypass
-
+            AuthApp authApp = new AuthApp(tbUserName.Text.Trim(), tbPassword.Text);
+            //AuthApp authApp = new AuthApp("nfsiam", "1234");//bypass
+            //AuthApp authApp = new AuthApp("dumbo", "abcd");//bypass
+            //Task<User> task = new Task<User>(authApp.GetProfile);
+            //task.Start();
             user = authApp.GetProfile();
             if(user==null)
             {
@@ -81,6 +83,28 @@ namespace ResManaged3.UI.Containers
         {
             //BtnLogin_Click(btnLogin, new EventArgs());//bypass
 
+        }
+
+        private void tbUserName_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))// || (e.KeyCode == Keys.Return))
+            {
+                e.SuppressKeyPress = true;
+                tbPassword.Select();
+                e.Handled = true;
+               
+            }
+        }
+
+        private void tbPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))// || (e.KeyCode == Keys.Return))
+            {
+                e.SuppressKeyPress = true;
+                BtnLogin_Click(btnLogin, new EventArgs());
+                e.Handled = true;
+                
+            }
         }
     }
 }

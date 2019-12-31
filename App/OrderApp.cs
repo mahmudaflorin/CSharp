@@ -9,11 +9,21 @@ namespace ResManaged3.App
 {
     class OrderApp
     {
-        public List<OrderPaletteApp> GetOrderPalettes(int status)
+        public List<OrderPaletteApp> GetPendingOrderPalettes()
         {
             Order order = new Order();
-            List<OrderPaletteApp> orderPaletteApps = order.GetOrderPalettes(status);
+            List<OrderPaletteApp> orderPaletteApps = order.GetOrderPalettes(0);
             
+            orderPaletteApps.Reverse();
+
+
+            return orderPaletteApps;
+        }
+        public List<OrderPaletteApp> GetTakenOrderPalettes()
+        {
+            Order order = new Order();
+            List<OrderPaletteApp> orderPaletteApps = order.GetOrderPalettes(1);
+
             orderPaletteApps.Reverse();
 
 

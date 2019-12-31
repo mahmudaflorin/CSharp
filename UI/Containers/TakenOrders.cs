@@ -15,7 +15,7 @@ namespace ResManaged3.UI.Containers
 {
     public partial class TakenOrders : Form
     {
-        OrderApp pendingItemApp;
+        OrderApp orderApp;
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
 
         public TakenOrders()
@@ -29,17 +29,21 @@ namespace ResManaged3.UI.Containers
             ShowPendingOrders();
         }
 
-        void ShowPendingOrders()
+        async void ShowPendingOrders()
         {
-            if(pendingItemApp==null)
+            if(orderApp==null)
             {
-                pendingItemApp = new OrderApp();
+                orderApp = new OrderApp();
             }
             //PendingItemApp 
-            List<OrderPaletteApp> orderPaletteApps = pendingItemApp.GetOrderPalettes(1);
+            //List<OrderPaletteApp> orderPaletteApps = pendingItemApp.GetOrderPalettes(1);
+            Task<List<OrderPaletteApp>> task = new Task<List<OrderPaletteApp>>(orderApp.GetTakenOrderPalettes);
+            task.Start();
 
-            
-            foreach(OrderPaletteApp orderPaletteApp in orderPaletteApps)
+            List<OrderPaletteApp> orderPaletteApps = await task;
+
+
+            foreach (OrderPaletteApp orderPaletteApp in orderPaletteApps)
             {
                 OrderPalette2 orderPalette2 = new OrderPalette2();
 

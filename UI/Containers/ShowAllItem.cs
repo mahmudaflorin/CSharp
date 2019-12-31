@@ -41,6 +41,8 @@ namespace ResManaged3.UI.Containers
             con.Close();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.DataSource = dt;
+            (dataGridView1.Columns[1] as DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom;
+            //dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
         }
 
     }

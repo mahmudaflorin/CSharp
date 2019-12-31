@@ -24,12 +24,17 @@ namespace ResManaged3.UI.Containers
             PopulateFlow();
         }
 
-        private void PopulateFlow()
+        
+        private async void PopulateFlow()
         {
             MenuAllItemsApp menuAllItemsApp = new MenuAllItemsApp();
-            List<ItemApp> itemAppList= menuAllItemsApp.GetItems();
 
-            foreach(ItemApp itemApp in itemAppList)
+            Task<List<ItemApp>> task = new Task<List<ItemApp>>(menuAllItemsApp.GetItems);
+            task.Start();
+            
+            List<ItemApp> itemAppList = await task;
+
+            foreach (ItemApp itemApp in itemAppList)
             {
                 Item item = new Item();
                 item.FoodPic = itemApp.ImageFile;

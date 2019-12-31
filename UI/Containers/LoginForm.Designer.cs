@@ -128,6 +128,7 @@
             this.tbUserName.Size = new System.Drawing.Size(349, 30);
             this.tbUserName.TabIndex = 1;
             this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbUserName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbUserName_KeyUp);
             // 
             // specGroupBox2
             // 
@@ -148,12 +149,13 @@
             this.tbPassword.BottomBorderColor = System.Drawing.Color.Transparent;
             this.tbPassword.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPassword.Location = new System.Drawing.Point(6, 18);
+            this.tbPassword.Location = new System.Drawing.Point(6, 17);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '●';
             this.tbPassword.Size = new System.Drawing.Size(349, 30);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyUp);
             // 
             // LoginForm
             // 
@@ -163,10 +165,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.specGroupBox1);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.specGroupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnSignUp);
+            this.Controls.Add(this.specGroupBox2);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

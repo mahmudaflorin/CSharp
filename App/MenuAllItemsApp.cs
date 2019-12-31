@@ -44,7 +44,7 @@ namespace ResManaged3.App
 
             ItemData itemData = new ItemData(itemAppList);
 
-
+            System.Console.WriteLine("abc");
             return itemData.GetItemApps();
         }
         

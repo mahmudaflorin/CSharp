@@ -95,14 +95,12 @@ namespace ResManaged3.UI.Elements
 
         private void BtnAccept_Click(object sender, EventArgs e)
         {
-            Update(1);
-            this.Dispose();
+            
         }
 
         private void BtnReject_Click(object sender, EventArgs e)
         {
-            Update(2);
-            this.Dispose();
+            
         }
 
         public void Update(int status)
@@ -151,6 +149,18 @@ namespace ResManaged3.UI.Elements
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Update(4);
+            this.Dispose();
+        }
+
+        private void btnAccept_Click_2(object sender, EventArgs e)
+        {
+            Update(1);
+            this.Dispose();
+        }
+
+        private void btnReject_Click_2(object sender, EventArgs e)
+        {
+            Update(2);
             this.Dispose();
         }
     }
