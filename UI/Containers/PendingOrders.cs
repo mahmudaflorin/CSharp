@@ -68,7 +68,7 @@ namespace ResManaged3.UI.Containers
                 }
 
                 orderPalette2.Items = labels;
-                orderPalette2.PendingTab = true;
+                orderPalette2.ParentTab = 0;
                 //Control[] controls = orderPalette2.Controls.Find("pnlButtons2", true);
                 //controls[0] as Pa
 

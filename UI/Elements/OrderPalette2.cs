@@ -46,12 +46,9 @@ namespace ResManaged3.UI.Elements
 
         public List<Label> Items
         {
-            ///get { return lblItems.Text; }
             set
             {
-                //Label label = new Label();
-                //label.Text = value;
-                //lblItems.Text = value;
+                
                 foreach (Label label in value)
                 {
                     flowLayoutPanel1.Controls.Add(label);
@@ -60,11 +57,7 @@ namespace ResManaged3.UI.Elements
             }
         }
 
-        //public string UserName
-        //{
-        //    get { return lblUsername.Text; }
-        //    set { lblUsername.Text = value; }
-        //}
+
 
         public string AddPhn
         {
@@ -72,36 +65,78 @@ namespace ResManaged3.UI.Elements
             set { lblAddPhn.Text = value; }
         }
 
-        public bool PendingTab
+        
+
+        public int ParentTab
         {
             set
             {
-                if(value)
+                if(value == 0)
                 {
                     pnlButtons2.Visible = false;
                     //Invalidate();
                 }
-                else
+                else if(value == 1)
                 {
                     pnlButtons.Visible = false;
+                }
+                else
+                {
+                    pnlButtons.Controls.Clear();
+                    pnlButtons2.Controls.Clear();
+                    
+                    
                 }
             }
         }
 
-        private void PnlBottom2_Paint(object sender, PaintEventArgs e)
+        public int Status
         {
-
+            set 
+            {
+                if (value == 0)
+                {
+                    Label label = new Label() { Dock = DockStyle.Fill };
+                    label.Text = "Order Placed";
+                    label.BackColor = Color.White;
+                    label.ForeColor = Color.Black;
+                    label.Font = new Font("Open Sans", 9);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons2.Controls.Add(label);
+                }
+                else if (value == 1)
+                {
+                    Label label = new Label() { Dock = DockStyle.Fill };
+                    label.Text = "Order Accespted";
+                    label.BackColor = Color.White;
+                    label.ForeColor = Color.Black;
+                    label.Font = new Font("Open Sans", 9);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons2.Controls.Add(label);
+                }
+                else if (value == 2)
+                {
+                    Label label = new Label() { Dock = DockStyle.Fill };
+                    label.Text = "Order Cancelled";
+                    label.BackColor = Color.White;
+                    label.ForeColor = Color.Black;
+                    label.Font = new Font("Open Sans", 9);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons2.Controls.Add(label);
+                }
+                else if(value == 3)
+                {
+                    Label label = new Label() { Dock = DockStyle.Fill };
+                    label.Text = "Order Delivered";
+                    label.BackColor = Color.White;
+                    label.ForeColor = Color.Black;
+                    label.Font = new Font("Open Sans", 9);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons2.Controls.Add(label);
+                }
+            }
         }
 
-        private void BtnAccept_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnReject_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         public void Update(int status)
         {
@@ -125,20 +160,7 @@ namespace ResManaged3.UI.Elements
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void btnAccept_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReject_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDeliver_Click(object sender, EventArgs e)
         {

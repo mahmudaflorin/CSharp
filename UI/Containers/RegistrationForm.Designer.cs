@@ -77,18 +77,27 @@
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.tbUserName = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbName = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbMobile = new ResManaged3.UI.CustomControls.TransTextBox();
-            this.tbAddress = new ResManaged3.UI.CustomControls.TransTextBox();
             this.panel36 = new System.Windows.Forms.Panel();
-            this.tbPassword = new ResManaged3.UI.CustomControls.TransTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel37 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.rbUser = new System.Windows.Forms.RadioButton();
+            this.rbCook = new System.Windows.Forms.RadioButton();
+            this.rbManager = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.tbUserName = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.tbName = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.tbEmail = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.tbMobile = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.tbAddress = new ResManaged3.UI.CustomControls.TransTextBox();
+            this.tbPassword = new ResManaged3.UI.CustomControls.TransTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,6 +107,7 @@
             this.panel26.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel36.SuspendLayout();
+            this.panel41.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -108,7 +118,7 @@
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(317, 508);
+            this.btnRegister.Location = new System.Drawing.Point(299, 508);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(200, 40);
@@ -125,7 +135,7 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(77, 508);
+            this.btnBack.Location = new System.Drawing.Point(60, 508);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(200, 40);
@@ -148,6 +158,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel26);
             this.flowLayoutPanel1.Controls.Add(this.panel31);
             this.flowLayoutPanel1.Controls.Add(this.panel36);
+            this.flowLayoutPanel1.Controls.Add(this.panel41);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 471);
@@ -636,6 +647,169 @@
             this.panel35.Size = new System.Drawing.Size(1, 77);
             this.panel35.TabIndex = 0;
             // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.White;
+            this.panel36.Controls.Add(this.tbPassword);
+            this.panel36.Controls.Add(this.label8);
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Controls.Add(this.panel38);
+            this.panel36.Controls.Add(this.panel39);
+            this.panel36.Controls.Add(this.panel40);
+            this.panel36.Location = new System.Drawing.Point(50, 612);
+            this.panel36.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(440, 77);
+            this.panel36.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label8.Location = new System.Drawing.Point(3, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 24);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Password";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel37.Location = new System.Drawing.Point(0, 1);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(1, 75);
+            this.panel37.TabIndex = 5;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel38.Location = new System.Drawing.Point(0, 0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(439, 1);
+            this.panel38.TabIndex = 4;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.LightGray;
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel39.Location = new System.Drawing.Point(0, 76);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(439, 1);
+            this.panel39.TabIndex = 1;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.LightGray;
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel40.Location = new System.Drawing.Point(439, 0);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(1, 77);
+            this.panel40.TabIndex = 0;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.White;
+            this.panel41.Controls.Add(this.rbUser);
+            this.panel41.Controls.Add(this.rbCook);
+            this.panel41.Controls.Add(this.rbManager);
+            this.panel41.Controls.Add(this.label9);
+            this.panel41.Controls.Add(this.panel42);
+            this.panel41.Controls.Add(this.panel43);
+            this.panel41.Controls.Add(this.panel44);
+            this.panel41.Controls.Add(this.panel45);
+            this.panel41.Location = new System.Drawing.Point(50, 699);
+            this.panel41.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(440, 77);
+            this.panel41.TabIndex = 14;
+            this.panel41.Visible = false;
+            // 
+            // rbUser
+            // 
+            this.rbUser.AutoSize = true;
+            this.rbUser.ForeColor = System.Drawing.Color.DimGray;
+            this.rbUser.Location = new System.Drawing.Point(372, 25);
+            this.rbUser.Name = "rbUser";
+            this.rbUser.Size = new System.Drawing.Size(53, 21);
+            this.rbUser.TabIndex = 7;
+            this.rbUser.TabStop = true;
+            this.rbUser.Text = "User";
+            this.rbUser.UseVisualStyleBackColor = true;
+            // 
+            // rbCook
+            // 
+            this.rbCook.AutoSize = true;
+            this.rbCook.ForeColor = System.Drawing.Color.DimGray;
+            this.rbCook.Location = new System.Drawing.Point(267, 26);
+            this.rbCook.Name = "rbCook";
+            this.rbCook.Size = new System.Drawing.Size(54, 21);
+            this.rbCook.TabIndex = 8;
+            this.rbCook.TabStop = true;
+            this.rbCook.Text = "Cook";
+            this.rbCook.UseVisualStyleBackColor = true;
+            // 
+            // rbManager
+            // 
+            this.rbManager.AutoSize = true;
+            this.rbManager.ForeColor = System.Drawing.Color.DimGray;
+            this.rbManager.Location = new System.Drawing.Point(125, 25);
+            this.rbManager.Name = "rbManager";
+            this.rbManager.Size = new System.Drawing.Size(77, 21);
+            this.rbManager.TabIndex = 9;
+            this.rbManager.TabStop = true;
+            this.rbManager.Text = "Manager";
+            this.rbManager.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.label9.Location = new System.Drawing.Point(3, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Role";
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel42.Location = new System.Drawing.Point(0, 1);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(1, 75);
+            this.panel42.TabIndex = 5;
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel43.Location = new System.Drawing.Point(0, 0);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(439, 1);
+            this.panel43.TabIndex = 4;
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.LightGray;
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel44.Location = new System.Drawing.Point(0, 76);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(439, 1);
+            this.panel44.TabIndex = 1;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.LightGray;
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel45.Location = new System.Drawing.Point(439, 0);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(1, 77);
+            this.panel45.TabIndex = 0;
+            // 
             // tbUserName
             // 
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -691,21 +865,6 @@
             this.tbAddress.Size = new System.Drawing.Size(300, 23);
             this.tbAddress.TabIndex = 6;
             // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.White;
-            this.panel36.Controls.Add(this.tbPassword);
-            this.panel36.Controls.Add(this.label8);
-            this.panel36.Controls.Add(this.panel37);
-            this.panel36.Controls.Add(this.panel38);
-            this.panel36.Controls.Add(this.panel39);
-            this.panel36.Controls.Add(this.panel40);
-            this.panel36.Location = new System.Drawing.Point(50, 612);
-            this.panel36.Margin = new System.Windows.Forms.Padding(50, 3, 3, 7);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(440, 77);
-            this.panel36.TabIndex = 13;
-            // 
             // tbPassword
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -716,53 +875,6 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(300, 23);
             this.tbPassword.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(3, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 24);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Password";
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel37.Location = new System.Drawing.Point(0, 1);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(1, 75);
-            this.panel37.TabIndex = 5;
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel38.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel38.Location = new System.Drawing.Point(0, 0);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(439, 1);
-            this.panel38.TabIndex = 4;
-            // 
-            // panel39
-            // 
-            this.panel39.BackColor = System.Drawing.Color.LightGray;
-            this.panel39.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel39.Location = new System.Drawing.Point(0, 76);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(439, 1);
-            this.panel39.TabIndex = 1;
-            // 
-            // panel40
-            // 
-            this.panel40.BackColor = System.Drawing.Color.LightGray;
-            this.panel40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel40.Location = new System.Drawing.Point(439, 0);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1, 77);
-            this.panel40.TabIndex = 0;
             // 
             // RegistrationForm
             // 
@@ -788,6 +900,8 @@
             this.panel26.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel36.ResumeLayout(false);
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -855,5 +969,14 @@
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.RadioButton rbUser;
+        private System.Windows.Forms.RadioButton rbCook;
+        private System.Windows.Forms.RadioButton rbManager;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel45;
     }
 }

@@ -1,16 +1,8 @@
 ﻿using ResManaged3.App;
-using ResManaged3.UI.Elements;
-
 using ResManaged3.UI.Containers;
+using ResManaged3.UI.Elements;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ResManaged3.UI
@@ -22,6 +14,7 @@ namespace ResManaged3.UI
         private  static PersonalInfo personalInfo;
         private static CheckOut checkOut;
         private static DeliverySettings deliverySettings;
+        private TrackOrder trackOrder;
 
         private User user, trouser;
 
@@ -170,6 +163,21 @@ namespace ResManaged3.UI
         {
             Landing landing = new Landing();
             Application.Run(landing);
+        }
+
+        private void btnMyOrders_Click(object sender, EventArgs e)
+        {
+            //if(trackOrder==null)
+            //{
+                trackOrder = new TrackOrder(user);
+            //}
+            Contain(trackOrder);
+        }
+
+        private void btnAllOrders_Click(object sender, EventArgs e)
+        {
+            AllOrders allOrders = new AllOrders(user);
+            Contain(allOrders);
         }
 
         void StaticClear()

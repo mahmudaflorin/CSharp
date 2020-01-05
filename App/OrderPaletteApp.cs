@@ -12,5 +12,6 @@ namespace ResManaged3.App
         public double Bill { get; set; }
         public string AddPhn { get; set; }
         public List<string> itemnames { get; set; }
+        public int Status { get; set; }
     }
 }

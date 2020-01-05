@@ -129,7 +129,6 @@ namespace ResManaged3.UI.Containers
             
             CheckOutApp.PlaceOrder(user);
             BtnClearCart_Click(btnClearCart, new EventArgs());
-            MessageBox.Show("Order placed", "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             userEnd.BtnAllItemsInvoke();
         }
     }

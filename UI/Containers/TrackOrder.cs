@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,12 +12,11 @@ using System.Windows.Forms;
 
 namespace ResManaged3.UI.Containers
 {
-    public partial class TakenOrders : Form
+    public partial class TrackOrder : Form
     {
         OrderApp orderApp;
-        static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Edu\Programs\C#\Practice\ResManaged3\Data\ResM.mdf;Integrated Security=True";
-
-        public TakenOrders()
+        User user;
+        public TrackOrder()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
@@ -26,21 +24,28 @@ namespace ResManaged3.UI.Containers
             this.Dock = DockStyle.Fill;
 
 
+           
+        }
+
+        public TrackOrder(User user): this()
+        {
+            this.user = user;
             ShowPendingOrders();
         }
 
         async void ShowPendingOrders()
         {
-            if(orderApp==null)
+            if (orderApp == null)
             {
-                orderApp = new OrderApp();
+                orderApp = new OrderApp(user);
             }
             //PendingItemApp 
-            //List<OrderPaletteApp> orderPaletteApps = pendingItemApp.GetOrderPalettes(1);
-            Task<List<OrderPaletteApp>> task = new Task<List<OrderPaletteApp>>(orderApp.GetTakenOrderPalettes);
+            //List<OrderPaletteApp> orderPaletteApps = orderApp.GetOrderPalettes(0);
+            Task<List<OrderPaletteApp>> task = new Task<List<OrderPaletteApp>>(orderApp.GetMyOrderPalettes);
             task.Start();
 
             List<OrderPaletteApp> orderPaletteApps = await task;
+
 
 
             foreach (OrderPaletteApp orderPaletteApp in orderPaletteApps)
@@ -53,7 +58,7 @@ namespace ResManaged3.UI.Containers
 
                 List<Label> labels = new List<Label>();
 
-                foreach(string str in orderPaletteApp.itemnames)
+                foreach (string str in orderPaletteApp.itemnames)
                 {
                     Label label = new Label();
                     label.AutoSize = true;
@@ -67,7 +72,8 @@ namespace ResManaged3.UI.Containers
                 }
 
                 orderPalette2.Items = labels;
-                orderPalette2.ParentTab = 1;
+                orderPalette2.ParentTab = 2;
+                orderPalette2.Status = orderPaletteApp.Status;
                 //Control[] controls = orderPalette2.Controls.Find("pnlButtons2", true);
                 //controls[0] as Pa
 

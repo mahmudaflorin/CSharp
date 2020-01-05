@@ -22,6 +22,19 @@ namespace ResManaged3.UI.Containers
 
         }
 
+        public bool RoleVisible
+        {
+            set
+            {
+                if(value==true)
+                {
+                    panel41.Visible = true;
+                    btnBack.Text = "Clear Changes";
+                    Invalidate();
+                }
+            }
+        }
+
         private void BtnBack_Click(object sender, EventArgs e)
         {
             if (this.Parent.Parent is Landing)
@@ -29,6 +42,10 @@ namespace ResManaged3.UI.Containers
                 Console.WriteLine("ok");
                 Landing landing = this.Parent.Parent as Landing;
                 landing.Contain(landing.GetLoginForm());
+            }
+            else
+            {
+                ResetSubmission();
             }
         }
 
@@ -45,7 +62,7 @@ namespace ResManaged3.UI.Containers
                 user.Mobile = tbMobile.Text.Trim();
                 user.Address = tbAddress.Text.Trim();
                 user.Password = tbPassword.Text.Trim();
-                user.UserType = 0;
+                user.UserType = GetUserType();
                 RegApp regApp = new RegApp(user);
                 string msg = regApp.CreateProfile();
                 ShowMessage(msg);
@@ -101,6 +118,11 @@ namespace ResManaged3.UI.Containers
                 MessageBox.Show("Gender have to be selected", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (rbManager.Checked == false && rbCook.Checked == false && rbUser.Checked == false)
+            {
+                MessageBox.Show("User Type have to be selected", "Empty field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
             return true;
         }
@@ -113,6 +135,17 @@ namespace ResManaged3.UI.Containers
                 return 2;
             else if (rbO.Checked)
                 return 3;
+            else
+                return 0;
+        }
+        private int GetUserType()
+        {
+            if (rbManager.Checked)
+                return 1;
+            else if (rbCook.Checked)
+                return 2;
+            else if (rbUser.Checked)
+                return 0;
             else
                 return 0;
         }
@@ -151,6 +184,7 @@ namespace ResManaged3.UI.Containers
             tbMobile.ResetText();
             tbAddress.ResetText();
             tbPassword.ResetText();
+            rbManager.Checked = false; rbCook.Checked = false; rbUser.Checked = false;
         }
     }
 }

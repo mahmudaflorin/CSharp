@@ -24,6 +24,7 @@ namespace ResManaged3.UI
         private ModifyItem removeItem;
         private MenuAllItems menuAllItems;
         private ShowAllItem showAllItem;
+        private PersonalInfo personalInfo;
 
         public Dashboard()
         {
@@ -39,6 +40,11 @@ namespace ResManaged3.UI
         {
             this.user = user;
             lblNameOfUser.Text = user.Name;
+        }
+        public void UpdateName()
+        {
+            Console.WriteLine(this.user.Name);
+            lblNameOfUser.Text = this.user.Name;
         }
 
         public void ShowDropDown(Panel pnlDD)
@@ -105,6 +111,14 @@ namespace ResManaged3.UI
                 pnlContainer.Controls.Clear();
                 pnlContainer.Controls.Add(control);
                 pnlContainer.Tag = control;
+                if(control is RegistrationForm)
+                {
+                    pnlContainer.Padding = new Padding(90, 0, 90, 0);
+                }
+                else
+                {
+                    pnlContainer.Padding = new Padding(0, 0, 0, 0);
+                }
                 control.Show();
             }
         }
@@ -134,6 +148,25 @@ namespace ResManaged3.UI
         {
             TakenOrders takenOrders = new TakenOrders();
             Contain(takenOrders);
+        }
+
+        private void btnAddEmployees_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationForm = new RegistrationForm() { RoleVisible = true };
+            Contain(registrationForm);
+        }
+
+        private void btnPersonalInfo_Click(object sender, EventArgs e)
+        {
+            if (personalInfo == null)
+            {
+                personalInfo = new PersonalInfo(user, this);
+                Contain(personalInfo);
+            }
+            else
+            {
+                Contain(personalInfo);
+            }
         }
 
         public void HideDropDown()

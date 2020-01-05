@@ -65,7 +65,15 @@ namespace ResManaged3.App
 
         public static void PlaceOrder(User user)
         {
-            Order.InserOrdersDb(user);
+            if(CheckOutApp.itemApps.Count>0)
+            {
+                Order.InserOrdersDb(user);
+                MessageBox.Show("Order placed", "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show("Please slect items to place order", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

@@ -66,16 +66,18 @@ namespace ResManaged3.Data
 
         #region PendingOrderOperations
 
-        public List<OrderPaletteApp> GetOrderPalettes (int status)
+        public List<OrderPaletteApp> GetOrderPalettes (string query)
         {
             List<OrderPaletteApp> orderPaletteApps = new List<OrderPaletteApp>();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from orderTable where status = @status", con);
+                //SqlCommand cmd = new SqlCommand("select * from orderTable where status = @status", con);
+                SqlCommand cmd = new SqlCommand(query, con);
+
 
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@status", status);
+                //cmd.Parameters.AddWithValue("@status", );
 
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -86,6 +88,7 @@ namespace ResManaged3.Data
                     orderPalette.OrderID = Convert.ToInt32(reader[0]);
                     //orderPalette.UserName = reader[1].ToString();
                     orderPalette.Bill = (double)reader[2];
+                    orderPalette.Status = Convert.ToInt32(reader[3]);
                     orderPalette.AddPhn = reader[4].ToString() + ", " + reader[5].ToString();
                     orderPalette.itemnames = GetItemInfo(orderPalette.OrderID);
 

@@ -145,6 +145,18 @@
     <Compile Include="UI\Containers\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Containers\AllOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\AllOrders.Designer.cs">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\TrackOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\TrackOrder.Designer.cs">
+      <DependentUpon>TrackOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomControls\SpecGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -168,6 +180,12 @@
     </Compile>
     <Compile Include="UI\Elements\OrderPalette2.Designer.cs">
       <DependentUpon>OrderPalette2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Elements\OrderStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\OrderStatus.Designer.cs">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Landing.cs">
       <SubType>Form</SubType>
@@ -230,6 +248,12 @@
     <EmbeddedResource Include="UI\Containers\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\AllOrders.resx">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\TrackOrder.resx">
+      <DependentUpon>TrackOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Elements\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Elements\OrderPalette2.resx">
       <DependentUpon>OrderPalette2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\OrderStatus.resx">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>

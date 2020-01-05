@@ -16,6 +16,7 @@ namespace ResManaged3.UI.Containers
     {
         User user;
         UserEnd userEnd;
+        Dashboard dashboard;
         public PersonalInfo()
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace ResManaged3.UI.Containers
         {
             this.user = user;
             this.userEnd = userEnd;
+            InitiateInfo();
+        }
+        public PersonalInfo(User user, Dashboard dashboard) : this()
+        {
+            this.user = user;
+            this.dashboard = dashboard;
             InitiateInfo();
         }
         public void InitiateInfo()
@@ -77,7 +84,10 @@ namespace ResManaged3.UI.Containers
                 string msg = personalInfoApp.UpdateProfile();
                 UpdateUserObject(newuser);
                 Console.WriteLine("aft "+user.Name);
-                userEnd.UpdateName();
+                if(userEnd!=null)
+                    userEnd.UpdateName();
+                if (dashboard != null)
+                    dashboard.UpdateName();
                 ShowMessage(msg);
 
                 
