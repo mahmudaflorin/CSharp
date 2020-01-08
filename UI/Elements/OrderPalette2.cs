@@ -100,39 +100,71 @@ namespace ResManaged3.UI.Elements
                     label.Text = "Order Placed";
                     label.BackColor = Color.White;
                     label.ForeColor = Color.Black;
-                    label.Font = new Font("Open Sans", 9);
+                    label.Font = new Font("Open Sans", 11);
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     pnlButtons2.Controls.Add(label);
+
+                    Label label2 = new Label() { Dock = DockStyle.Fill };
+                    label2.Text = "Your order will be reviewed soon!";
+                    label2.BackColor = Color.White;
+                    label2.ForeColor = Color.FromArgb(87, 89, 91);
+                    label2.Font = new Font("Open Sans", 9);
+                    label2.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons.Controls.Add(label2);
                 }
                 else if (value == 1)
                 {
                     Label label = new Label() { Dock = DockStyle.Fill };
                     label.Text = "Order Accespted";
                     label.BackColor = Color.White;
-                    label.ForeColor = Color.Black;
-                    label.Font = new Font("Open Sans", 9);
+                    label.ForeColor = Color.FromArgb(76, 175, 80);
+                    label.Font = new Font("Open Sans", 11);
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     pnlButtons2.Controls.Add(label);
+
+                    Label label2 = new Label() { Dock = DockStyle.Fill };
+                    label2.Text = "We are preparing your order!";
+                    label2.BackColor = Color.White;
+                    label2.ForeColor = Color.FromArgb(87, 89, 91);
+                    label2.Font = new Font("Open Sans", 9);
+                    label2.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons.Controls.Add(label2);
                 }
                 else if (value == 2)
                 {
                     Label label = new Label() { Dock = DockStyle.Fill };
                     label.Text = "Order Cancelled";
                     label.BackColor = Color.White;
-                    label.ForeColor = Color.Black;
-                    label.Font = new Font("Open Sans", 9);
+                    label.ForeColor = Color.FromArgb(253, 85, 35);
+                    label.Font = new Font("Open Sans", 11);
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     pnlButtons2.Controls.Add(label);
+
+                    Label label2 = new Label() { Dock = DockStyle.Fill };
+                    label2.Text = "Sorry we had to cancel your order!";
+                    label2.BackColor = Color.White;
+                    label2.ForeColor = Color.FromArgb(87, 89, 91);
+                    label2.Font = new Font("Open Sans", 9);
+                    label2.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons.Controls.Add(label2);
                 }
                 else if(value == 3)
                 {
                     Label label = new Label() { Dock = DockStyle.Fill };
                     label.Text = "Order Delivered";
                     label.BackColor = Color.White;
-                    label.ForeColor = Color.Black;
-                    label.Font = new Font("Open Sans", 9);
+                    label.ForeColor = Color.FromArgb(60, 158, 251);
+                    label.Font = new Font("Open Sans", 11);
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     pnlButtons2.Controls.Add(label);
+
+                    Label label2 = new Label() { Dock = DockStyle.Fill };
+                    label2.Text = "Your order will be delivered soon!";
+                    label2.BackColor = Color.White;
+                    label2.ForeColor = Color.FromArgb(87, 89, 91);
+                    label2.Font = new Font("Open Sans", 9);
+                    label2.TextAlign = ContentAlignment.MiddleCenter;
+                    pnlButtons.Controls.Add(label2);
                 }
             }
         }

@@ -15,6 +15,7 @@ namespace ResManaged3.UI.Containers
     public partial class LoginForm : Form
     {
         User user;
+        Point point;
         public LoginForm()
         { 
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace ResManaged3.UI.Containers
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            if(this.Parent.Parent is Landing)
+            if (this.Parent.Parent is Landing)
             {
                 Console.WriteLine("ok");
                 Landing landing = this.Parent.Parent as Landing;
@@ -53,6 +54,10 @@ namespace ResManaged3.UI.Containers
             }
             else
             {
+                //Volume.On();
+                if(this.Parent.Parent is Landing)
+                    point = this.Parent.Parent.Location;
+                
                 Thread th = new Thread(ShowUserEnd);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
@@ -67,13 +72,17 @@ namespace ResManaged3.UI.Containers
         {
             if (user.UserType.Equals(0))
             {
-                UserEnd userEnd = new UserEnd(user);
+                UserEnd userEnd = new UserEnd(user) { StartPosition = FormStartPosition.Manual, Location = point};
+                //userEnd.Location = this.Location;
+                //userEnd.StartPosition = FormStartPosition.Manual();
+                //userEnd.Location = this.Location;
                 userEnd.BringToFront();
                 Application.Run(userEnd);
             }
             else if(user.UserType.Equals(1))
             {
-                Dashboard dashboard = new Dashboard(user);
+                Dashboard dashboard = new Dashboard(user) { StartPosition = FormStartPosition.Manual, Location = point };
+                //dashboard.Location = this.Location;
                 dashboard.BringToFront();
                 Application.Run(dashboard);
             }
@@ -82,6 +91,7 @@ namespace ResManaged3.UI.Containers
         private void LoginForm_Load(object sender, EventArgs e)
         {
             //BtnLogin_Click(btnLogin, new EventArgs());//bypass
+            //Volume.Off();
 
         }
 

@@ -34,6 +34,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.btnFeedback = new System.Windows.Forms.Button();
             this.btnFaqs = new System.Windows.Forms.Button();
+            this.btnSupport = new System.Windows.Forms.Button();
             this.pnlSubMenuDiv2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,25 +43,25 @@
             this.btnNewArrivals = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnAllItems = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.pnlSideBarDiv1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlMyProDD = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnAllOrders = new System.Windows.Forms.Button();
             this.btnActiveOrders = new System.Windows.Forms.Button();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
+            this.btnMyPro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUser = new System.Windows.Forms.Panel();
             this.lblNameOfUser = new System.Windows.Forms.Label();
             this.pnlNavBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.btnCheckOut = new System.Windows.Forms.Button();
-            this.btnSupport = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnMyPro = new System.Windows.Forms.Button();
-            this.btnAllOrders = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSideBar.SuspendLayout();
             this.pnlSupportDD.SuspendLayout();
             this.pnlSubMenuDiv2.SuspendLayout();
@@ -165,6 +166,29 @@
             this.btnFaqs.Text = "FAQs";
             this.btnFaqs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFaqs.UseVisualStyleBackColor = false;
+            // 
+            // btnSupport
+            // 
+            this.btnSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnSupport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSupport.FlatAppearance.BorderSize = 0;
+            this.btnSupport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnSupport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupport.ForeColor = System.Drawing.Color.White;
+            this.btnSupport.Image = ((System.Drawing.Image)(resources.GetObject("btnSupport.Image")));
+            this.btnSupport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSupport.Location = new System.Drawing.Point(0, 453);
+            this.btnSupport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnSupport.Size = new System.Drawing.Size(203, 40);
+            this.btnSupport.TabIndex = 23;
+            this.btnSupport.Text = "Support";
+            this.btnSupport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupport.UseVisualStyleBackColor = false;
+            this.btnSupport.Click += new System.EventHandler(this.BtnSupport_Click);
             // 
             // pnlSubMenuDiv2
             // 
@@ -291,6 +315,29 @@
             this.btnAllItems.UseVisualStyleBackColor = false;
             this.btnAllItems.Click += new System.EventHandler(this.BtnAllItems_Click);
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenu.Location = new System.Drawing.Point(0, 252);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnMenu.Size = new System.Drawing.Size(203, 40);
+            this.btnMenu.TabIndex = 20;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
             // pnlSideBarDiv1
             // 
             this.pnlSideBarDiv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(85)))));
@@ -356,6 +403,27 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
             // 
+            // btnAllOrders
+            // 
+            this.btnAllOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnAllOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAllOrders.FlatAppearance.BorderSize = 0;
+            this.btnAllOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnAllOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnAllOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllOrders.ForeColor = System.Drawing.Color.White;
+            this.btnAllOrders.Location = new System.Drawing.Point(0, 80);
+            this.btnAllOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAllOrders.Name = "btnAllOrders";
+            this.btnAllOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
+            this.btnAllOrders.Size = new System.Drawing.Size(203, 40);
+            this.btnAllOrders.TabIndex = 6;
+            this.btnAllOrders.Text = "Order History";
+            this.btnAllOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllOrders.UseVisualStyleBackColor = false;
+            this.btnAllOrders.Click += new System.EventHandler(this.btnAllOrders_Click);
+            // 
             // btnActiveOrders
             // 
             this.btnActiveOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
@@ -397,6 +465,29 @@
             this.btnPersonalInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonalInfo.UseVisualStyleBackColor = false;
             this.btnPersonalInfo.Click += new System.EventHandler(this.BtnPersonalInfo_Click);
+            // 
+            // btnMyPro
+            // 
+            this.btnMyPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnMyPro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMyPro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnMyPro.FlatAppearance.BorderSize = 0;
+            this.btnMyPro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnMyPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnMyPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyPro.ForeColor = System.Drawing.Color.White;
+            this.btnMyPro.Image = ((System.Drawing.Image)(resources.GetObject("btnMyPro.Image")));
+            this.btnMyPro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMyPro.Location = new System.Drawing.Point(0, 51);
+            this.btnMyPro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMyPro.Name = "btnMyPro";
+            this.btnMyPro.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnMyPro.Size = new System.Drawing.Size(203, 40);
+            this.btnMyPro.TabIndex = 17;
+            this.btnMyPro.Text = "My Profile";
+            this.btnMyPro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyPro.UseVisualStyleBackColor = false;
+            this.btnMyPro.Click += new System.EventHandler(this.BtnMyPro_Click);
             // 
             // panel1
             // 
@@ -446,30 +537,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnCheckOut);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(724, 32);
             this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(220, 100);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(724, 1);
-            this.panel3.TabIndex = 2;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(220, 101);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(724, 460);
-            this.pnlContainer.TabIndex = 3;
             // 
             // btnCheckOut
             // 
@@ -493,95 +567,43 @@
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.BtnCheckOut_Click);
             // 
-            // btnSupport
+            // panel3
             // 
-            this.btnSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnSupport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSupport.FlatAppearance.BorderSize = 0;
-            this.btnSupport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnSupport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupport.ForeColor = System.Drawing.Color.White;
-            this.btnSupport.Image = ((System.Drawing.Image)(resources.GetObject("btnSupport.Image")));
-            this.btnSupport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSupport.Location = new System.Drawing.Point(0, 453);
-            this.btnSupport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSupport.Name = "btnSupport";
-            this.btnSupport.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnSupport.Size = new System.Drawing.Size(203, 40);
-            this.btnSupport.TabIndex = 23;
-            this.btnSupport.Text = "Support";
-            this.btnSupport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupport.UseVisualStyleBackColor = false;
-            this.btnSupport.Click += new System.EventHandler(this.BtnSupport_Click);
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(220, 100);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(724, 1);
+            this.panel3.TabIndex = 2;
             // 
-            // btnMenu
+            // pnlContainer
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMenu.Location = new System.Drawing.Point(0, 252);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnMenu.Size = new System.Drawing.Size(203, 40);
-            this.btnMenu.TabIndex = 20;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(220, 101);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(724, 460);
+            this.pnlContainer.TabIndex = 3;
             // 
-            // btnMyPro
+            // button1
             // 
-            this.btnMyPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnMyPro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyPro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMyPro.FlatAppearance.BorderSize = 0;
-            this.btnMyPro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnMyPro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnMyPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyPro.ForeColor = System.Drawing.Color.White;
-            this.btnMyPro.Image = ((System.Drawing.Image)(resources.GetObject("btnMyPro.Image")));
-            this.btnMyPro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMyPro.Location = new System.Drawing.Point(0, 51);
-            this.btnMyPro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMyPro.Name = "btnMyPro";
-            this.btnMyPro.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnMyPro.Size = new System.Drawing.Size(203, 40);
-            this.btnMyPro.TabIndex = 17;
-            this.btnMyPro.Text = "My Profile";
-            this.btnMyPro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyPro.UseVisualStyleBackColor = false;
-            this.btnMyPro.Click += new System.EventHandler(this.BtnMyPro_Click);
-            // 
-            // btnAllOrders
-            // 
-            this.btnAllOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnAllOrders.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAllOrders.FlatAppearance.BorderSize = 0;
-            this.btnAllOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnAllOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnAllOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllOrders.ForeColor = System.Drawing.Color.White;
-            this.btnAllOrders.Location = new System.Drawing.Point(0, 80);
-            this.btnAllOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAllOrders.Name = "btnAllOrders";
-            this.btnAllOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnAllOrders.Size = new System.Drawing.Size(203, 40);
-            this.btnAllOrders.TabIndex = 6;
-            this.btnAllOrders.Text = "Order History";
-            this.btnAllOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllOrders.UseVisualStyleBackColor = false;
-            this.btnAllOrders.Click += new System.EventHandler(this.btnAllOrders_Click);
+            this.button1.BackColor = System.Drawing.Color.ForestGreen;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(500, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.button1.Size = new System.Drawing.Size(53, 32);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "0";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UserEnd
             // 
@@ -597,7 +619,7 @@
             this.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserEnd";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ResManaged 2.0";
             this.pnlSideBar.ResumeLayout(false);
             this.pnlSupportDD.ResumeLayout(false);
@@ -646,6 +668,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Button btnAllOrders;
+        private System.Windows.Forms.Button button1;
     }
 }
 

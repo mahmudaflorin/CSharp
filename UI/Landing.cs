@@ -26,6 +26,7 @@ namespace ResManaged3.UI
                 pnlLand.Controls.Add(loginForm);
                 pnlLand.Tag = loginForm;
                 loginForm.Show();
+                //Volume.Off();
             }
             else
             {

@@ -87,8 +87,8 @@
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.btnCancelChanges = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancelChanges = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -733,39 +733,39 @@
             this.panel40.Size = new System.Drawing.Size(1, 77);
             this.panel40.TabIndex = 0;
             // 
-            // btnCancelChanges
-            // 
-            this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelChanges.FlatAppearance.BorderSize = 0;
-            this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
-            this.btnCancelChanges.Location = new System.Drawing.Point(148, 369);
-            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelChanges.Name = "btnCancelChanges";
-            this.btnCancelChanges.Size = new System.Drawing.Size(200, 40);
-            this.btnCancelChanges.TabIndex = 3;
-            this.btnCancelChanges.Text = "Cancel Changes";
-            this.btnCancelChanges.UseVisualStyleBackColor = false;
-            this.btnCancelChanges.Click += new System.EventHandler(this.BtnCancelChanges_Click);
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(388, 369);
+            this.btnUpdate.Location = new System.Drawing.Point(387, 407);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 40);
-            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update Changes";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // btnCancelChanges
+            // 
+            this.btnCancelChanges.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnCancelChanges.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelChanges.FlatAppearance.BorderSize = 0;
+            this.btnCancelChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
+            this.btnCancelChanges.Location = new System.Drawing.Point(148, 407);
+            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancelChanges.Name = "btnCancelChanges";
+            this.btnCancelChanges.Size = new System.Drawing.Size(200, 40);
+            this.btnCancelChanges.TabIndex = 5;
+            this.btnCancelChanges.Text = "Cancel Changes";
+            this.btnCancelChanges.UseVisualStyleBackColor = false;
+            this.btnCancelChanges.Click += new System.EventHandler(this.BtnCancelChanges_Click);
             // 
             // PersonalInfo
             // 
@@ -796,8 +796,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancelChanges;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel16;
         private CustomControls.TransTextBox tbUserName;
         private System.Windows.Forms.Label label1;
@@ -856,5 +854,7 @@
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancelChanges;
     }
 }

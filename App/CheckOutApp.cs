@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ResManaged3.UI.Elements;
 using ResManaged3.Data;
+using ResManaged3.UI;
 
 namespace ResManaged3.App
 {

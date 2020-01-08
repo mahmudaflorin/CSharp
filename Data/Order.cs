@@ -33,15 +33,24 @@ namespace ResManaged3.Data
                 cmd.ExecuteNonQuery();
 
                 SqlCommand cmd2 = new SqlCommand("SELECT IDENT_CURRENT('orderTable')", con);
-
-
-
-
                 int id = Convert.ToInt32(cmd2.ExecuteScalar());
 
 
+                cmd2 = new SqlCommand("Insert into notification values (@userID, @message, @notified);", con);
+                cmd2.CommandType = CommandType.Text;
 
-                foreach(CartItemApp cartItemApp in CheckOutApp.itemApps)
+                cmd2.Parameters.AddWithValue("@userID", user.UserName);
+                cmd2.Parameters.AddWithValue("@message", user.UserName + " has placed an order ["+id+"]");
+                cmd2.Parameters.AddWithValue("@notified", 0);
+
+                cmd2.ExecuteNonQuery();
+
+
+
+
+
+
+                foreach (CartItemApp cartItemApp in CheckOutApp.itemApps)
                 {
                     
                     SqlCommand cmd3 = new SqlCommand("Insert into orderExtension values ( @orderID, @itemCode, @quantity);", con);

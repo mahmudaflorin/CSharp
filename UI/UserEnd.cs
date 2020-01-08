@@ -4,13 +4,15 @@ using ResManaged3.UI.Elements;
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+
 
 namespace ResManaged3.UI
 {
     public partial class UserEnd : Form
     {
 
-        private  MenuAllItems menuAllItems;
+        private MenuAllItems menuAllItems;
         private  static PersonalInfo personalInfo;
         private static CheckOut checkOut;
         private static DeliverySettings deliverySettings;
@@ -26,6 +28,7 @@ namespace ResManaged3.UI
             ShowDropDown(pnlMenuDD);
             BtnAllItems_Click(btnAllItems, new EventArgs());
 
+
         }
 
         public UserEnd(User user) : this()
@@ -33,6 +36,7 @@ namespace ResManaged3.UI
             this.user = user;
             lblNameOfUser.Text = user.Name;
         }
+        
 
         public User GetUser()
         {

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace ResManaged3.UI
 {
@@ -25,6 +26,10 @@ namespace ResManaged3.UI
         private MenuAllItems menuAllItems;
         private ShowAllItem showAllItem;
         private PersonalInfo personalInfo;
+        private NotiApp notiApp;
+        SoundPlayer sound = new SoundPlayer(@"C:\Users\Siam\Downloads\notisound.wav");
+
+
 
         public Dashboard()
         {
@@ -40,6 +45,10 @@ namespace ResManaged3.UI
         {
             this.user = user;
             lblNameOfUser.Text = user.Name;
+
+            timer1.Interval = 5000;
+
+            timer1.Start();
         }
         public void UpdateName()
         {
@@ -167,6 +176,28 @@ namespace ResManaged3.UI
             {
                 Contain(personalInfo);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int temp = Convert.ToInt32(lblNotiCount.Text);
+            if (notiApp==null)
+            {
+                notiApp = new NotiApp();
+            }
+            int count = notiApp.GetNotiCount();
+            if(temp<count)
+            {
+                // sound = new SoundPlayer(@"C:\Users\Siam\Downloads\notisound.mp3");
+                sound.Play();
+            }
+
+            lblNotiCount.Text = count.ToString();
+        }
+
+        private void btnNoti_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void HideDropDown()

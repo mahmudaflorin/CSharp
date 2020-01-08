@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNotiCount = new System.Windows.Forms.Label();
+            this.btnNoti = new System.Windows.Forms.Button();
             this.pnlManageOrdersDD = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.btnTakenOrders = new System.Windows.Forms.Button();
             this.btnPendingOrders = new System.Windows.Forms.Button();
+            this.btnManageOrders = new System.Windows.Forms.Button();
             this.pnlSubMenuDiv2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +47,7 @@
             this.btnAllItem = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnAddItems = new System.Windows.Forms.Button();
+            this.btnManageMenu = new System.Windows.Forms.Button();
             this.pnlSideBarDiv1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,15 +55,15 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnAddEmployees = new System.Windows.Forms.Button();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
+            this.btnManageEmployees = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUser = new System.Windows.Forms.Panel();
             this.lblNameOfUser = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.btnManageOrders = new System.Windows.Forms.Button();
-            this.btnManageMenu = new System.Windows.Forms.Button();
-            this.btnManageEmployees = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlSideBar.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnlManageOrdersDD.SuspendLayout();
             this.pnlSubMenuDiv2.SuspendLayout();
             this.pnlManageMenuDD.SuspendLayout();
@@ -70,6 +76,7 @@
             // 
             this.pnlSideBar.AutoScroll = true;
             this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(85)))));
+            this.pnlSideBar.Controls.Add(this.panel2);
             this.pnlSideBar.Controls.Add(this.pnlManageOrdersDD);
             this.pnlSideBar.Controls.Add(this.btnManageOrders);
             this.pnlSideBar.Controls.Add(this.pnlSubMenuDiv2);
@@ -84,8 +91,48 @@
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(220, 561);
+            this.pnlSideBar.Size = new System.Drawing.Size(220, 741);
             this.pnlSideBar.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblNotiCount);
+            this.panel2.Controls.Add(this.btnNoti);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 641);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 100);
+            this.panel2.TabIndex = 25;
+            // 
+            // lblNotiCount
+            // 
+            this.lblNotiCount.AutoSize = true;
+            this.lblNotiCount.BackColor = System.Drawing.Color.Transparent;
+            this.lblNotiCount.ForeColor = System.Drawing.Color.White;
+            this.lblNotiCount.Location = new System.Drawing.Point(119, 8);
+            this.lblNotiCount.Name = "lblNotiCount";
+            this.lblNotiCount.Size = new System.Drawing.Size(15, 17);
+            this.lblNotiCount.TabIndex = 6;
+            this.lblNotiCount.Text = "0";
+            // 
+            // btnNoti
+            // 
+            this.btnNoti.BackColor = System.Drawing.Color.Transparent;
+            this.btnNoti.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnNoti.FlatAppearance.BorderSize = 0;
+            this.btnNoti.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNoti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNoti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoti.ForeColor = System.Drawing.Color.White;
+            this.btnNoti.Image = global::ResManaged3.Properties.Resources.notiic;
+            this.btnNoti.Location = new System.Drawing.Point(97, 17);
+            this.btnNoti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNoti.Name = "btnNoti";
+            this.btnNoti.Size = new System.Drawing.Size(24, 24);
+            this.btnNoti.TabIndex = 5;
+            this.btnNoti.Text = "0";
+            this.btnNoti.UseVisualStyleBackColor = false;
+            this.btnNoti.Click += new System.EventHandler(this.btnNoti_Click);
             // 
             // pnlManageOrdersDD
             // 
@@ -96,7 +143,7 @@
             this.pnlManageOrdersDD.Location = new System.Drawing.Point(0, 453);
             this.pnlManageOrdersDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlManageOrdersDD.Name = "pnlManageOrdersDD";
-            this.pnlManageOrdersDD.Size = new System.Drawing.Size(203, 120);
+            this.pnlManageOrdersDD.Size = new System.Drawing.Size(220, 120);
             this.pnlManageOrdersDD.TabIndex = 24;
             this.pnlManageOrdersDD.Visible = false;
             // 
@@ -114,7 +161,7 @@
             this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(203, 40);
+            this.button11.Size = new System.Drawing.Size(220, 40);
             this.button11.TabIndex = 4;
             this.button11.Text = "Complain Box";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +181,7 @@
             this.btnTakenOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTakenOrders.Name = "btnTakenOrders";
             this.btnTakenOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnTakenOrders.Size = new System.Drawing.Size(203, 40);
+            this.btnTakenOrders.Size = new System.Drawing.Size(220, 40);
             this.btnTakenOrders.TabIndex = 3;
             this.btnTakenOrders.Text = "Taken Orders";
             this.btnTakenOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,12 +202,35 @@
             this.btnPendingOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPendingOrders.Name = "btnPendingOrders";
             this.btnPendingOrders.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnPendingOrders.Size = new System.Drawing.Size(203, 40);
+            this.btnPendingOrders.Size = new System.Drawing.Size(220, 40);
             this.btnPendingOrders.TabIndex = 2;
             this.btnPendingOrders.Text = "PendingOrders";
             this.btnPendingOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPendingOrders.UseVisualStyleBackColor = false;
             this.btnPendingOrders.Click += new System.EventHandler(this.BtnPendingOrders_Click);
+            // 
+            // btnManageOrders
+            // 
+            this.btnManageOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnManageOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnManageOrders.FlatAppearance.BorderSize = 0;
+            this.btnManageOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnManageOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnManageOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageOrders.ForeColor = System.Drawing.Color.White;
+            this.btnManageOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnManageOrders.Image")));
+            this.btnManageOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnManageOrders.Location = new System.Drawing.Point(0, 413);
+            this.btnManageOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManageOrders.Name = "btnManageOrders";
+            this.btnManageOrders.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnManageOrders.Size = new System.Drawing.Size(220, 40);
+            this.btnManageOrders.TabIndex = 23;
+            this.btnManageOrders.Text = "Manage Orders";
+            this.btnManageOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageOrders.UseVisualStyleBackColor = false;
+            this.btnManageOrders.Click += new System.EventHandler(this.BtnManageOrders_Click);
             // 
             // pnlSubMenuDiv2
             // 
@@ -171,14 +241,14 @@
             this.pnlSubMenuDiv2.Location = new System.Drawing.Point(0, 412);
             this.pnlSubMenuDiv2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSubMenuDiv2.Name = "pnlSubMenuDiv2";
-            this.pnlSubMenuDiv2.Size = new System.Drawing.Size(203, 1);
+            this.pnlSubMenuDiv2.Size = new System.Drawing.Size(220, 1);
             this.pnlSubMenuDiv2.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(33)))), ((int)(((byte)(55)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Location = new System.Drawing.Point(194, 0);
+            this.label4.Location = new System.Drawing.Point(211, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(9, 1);
             this.label4.TabIndex = 1;
@@ -202,7 +272,7 @@
             this.pnlManageMenuDD.Location = new System.Drawing.Point(0, 252);
             this.pnlManageMenuDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlManageMenuDD.Name = "pnlManageMenuDD";
-            this.pnlManageMenuDD.Size = new System.Drawing.Size(203, 160);
+            this.pnlManageMenuDD.Size = new System.Drawing.Size(220, 160);
             this.pnlManageMenuDD.TabIndex = 21;
             this.pnlManageMenuDD.Visible = false;
             // 
@@ -220,7 +290,7 @@
             this.btnHotDeals.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHotDeals.Name = "btnHotDeals";
             this.btnHotDeals.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnHotDeals.Size = new System.Drawing.Size(203, 40);
+            this.btnHotDeals.Size = new System.Drawing.Size(220, 40);
             this.btnHotDeals.TabIndex = 5;
             this.btnHotDeals.Text = "Hot Deals!";
             this.btnHotDeals.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,7 +310,7 @@
             this.btnAllItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAllItem.Name = "btnAllItem";
             this.btnAllItem.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnAllItem.Size = new System.Drawing.Size(203, 40);
+            this.btnAllItem.Size = new System.Drawing.Size(220, 40);
             this.btnAllItem.TabIndex = 4;
             this.btnAllItem.Text = "Show All Items";
             this.btnAllItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,7 +331,7 @@
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnModify.Name = "btnModify";
             this.btnModify.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnModify.Size = new System.Drawing.Size(203, 40);
+            this.btnModify.Size = new System.Drawing.Size(220, 40);
             this.btnModify.TabIndex = 3;
             this.btnModify.Text = "Modify Item";
             this.btnModify.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,12 +352,35 @@
             this.btnAddItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddItems.Name = "btnAddItems";
             this.btnAddItems.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnAddItems.Size = new System.Drawing.Size(203, 40);
+            this.btnAddItems.Size = new System.Drawing.Size(220, 40);
             this.btnAddItems.TabIndex = 2;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddItems.UseVisualStyleBackColor = false;
             this.btnAddItems.Click += new System.EventHandler(this.BtnAddItems_Click);
+            // 
+            // btnManageMenu
+            // 
+            this.btnManageMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnManageMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnManageMenu.FlatAppearance.BorderSize = 0;
+            this.btnManageMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnManageMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnManageMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageMenu.ForeColor = System.Drawing.Color.White;
+            this.btnManageMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnManageMenu.Image")));
+            this.btnManageMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnManageMenu.Location = new System.Drawing.Point(0, 212);
+            this.btnManageMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManageMenu.Name = "btnManageMenu";
+            this.btnManageMenu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnManageMenu.Size = new System.Drawing.Size(220, 40);
+            this.btnManageMenu.TabIndex = 20;
+            this.btnManageMenu.Text = "Manage Menu";
+            this.btnManageMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageMenu.UseVisualStyleBackColor = false;
+            this.btnManageMenu.Click += new System.EventHandler(this.BtnManageMenu_Click);
             // 
             // pnlSideBarDiv1
             // 
@@ -298,14 +391,14 @@
             this.pnlSideBarDiv1.Location = new System.Drawing.Point(0, 211);
             this.pnlSideBarDiv1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSideBarDiv1.Name = "pnlSideBarDiv1";
-            this.pnlSideBarDiv1.Size = new System.Drawing.Size(203, 1);
+            this.pnlSideBarDiv1.Size = new System.Drawing.Size(220, 1);
             this.pnlSideBarDiv1.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(33)))), ((int)(((byte)(55)))));
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(194, 0);
+            this.label3.Location = new System.Drawing.Point(211, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(9, 1);
             this.label3.TabIndex = 1;
@@ -328,7 +421,7 @@
             this.pnlManageEmployeesDD.Location = new System.Drawing.Point(0, 91);
             this.pnlManageEmployeesDD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlManageEmployeesDD.Name = "pnlManageEmployeesDD";
-            this.pnlManageEmployeesDD.Size = new System.Drawing.Size(203, 120);
+            this.pnlManageEmployeesDD.Size = new System.Drawing.Size(220, 120);
             this.pnlManageEmployeesDD.TabIndex = 18;
             this.pnlManageEmployeesDD.Visible = false;
             // 
@@ -346,7 +439,7 @@
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(203, 40);
+            this.btnLogOut.Size = new System.Drawing.Size(220, 40);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -367,7 +460,7 @@
             this.btnAddEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddEmployees.Name = "btnAddEmployees";
             this.btnAddEmployees.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnAddEmployees.Size = new System.Drawing.Size(203, 40);
+            this.btnAddEmployees.Size = new System.Drawing.Size(220, 40);
             this.btnAddEmployees.TabIndex = 4;
             this.btnAddEmployees.Text = "Add Employess";
             this.btnAddEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,12 +481,35 @@
             this.btnPersonalInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPersonalInfo.Name = "btnPersonalInfo";
             this.btnPersonalInfo.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.btnPersonalInfo.Size = new System.Drawing.Size(203, 40);
+            this.btnPersonalInfo.Size = new System.Drawing.Size(220, 40);
             this.btnPersonalInfo.TabIndex = 2;
             this.btnPersonalInfo.Text = "Personal Info";
             this.btnPersonalInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonalInfo.UseVisualStyleBackColor = false;
             this.btnPersonalInfo.Click += new System.EventHandler(this.btnPersonalInfo_Click);
+            // 
+            // btnManageEmployees
+            // 
+            this.btnManageEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.btnManageEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnManageEmployees.FlatAppearance.BorderSize = 0;
+            this.btnManageEmployees.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
+            this.btnManageEmployees.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
+            this.btnManageEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageEmployees.ForeColor = System.Drawing.Color.White;
+            this.btnManageEmployees.Image = ((System.Drawing.Image)(resources.GetObject("btnManageEmployees.Image")));
+            this.btnManageEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnManageEmployees.Location = new System.Drawing.Point(0, 51);
+            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManageEmployees.Name = "btnManageEmployees";
+            this.btnManageEmployees.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnManageEmployees.Size = new System.Drawing.Size(220, 40);
+            this.btnManageEmployees.TabIndex = 17;
+            this.btnManageEmployees.Text = "Manage Employees";
+            this.btnManageEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageEmployees.UseVisualStyleBackColor = false;
+            this.btnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
             // 
             // panel1
             // 
@@ -402,7 +518,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 1);
+            this.panel1.Size = new System.Drawing.Size(220, 1);
             this.panel1.TabIndex = 10;
             // 
             // pnlUser
@@ -413,7 +529,7 @@
             this.pnlUser.Location = new System.Drawing.Point(0, 0);
             this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlUser.Name = "pnlUser";
-            this.pnlUser.Size = new System.Drawing.Size(203, 50);
+            this.pnlUser.Size = new System.Drawing.Size(220, 50);
             this.pnlUser.TabIndex = 0;
             // 
             // lblNameOfUser
@@ -425,7 +541,7 @@
             this.lblNameOfUser.Location = new System.Drawing.Point(0, 0);
             this.lblNameOfUser.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameOfUser.Name = "lblNameOfUser";
-            this.lblNameOfUser.Size = new System.Drawing.Size(203, 50);
+            this.lblNameOfUser.Size = new System.Drawing.Size(220, 50);
             this.lblNameOfUser.TabIndex = 1;
             this.lblNameOfUser.Text = "Nafiz Fuad Siam";
             this.lblNameOfUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -447,84 +563,19 @@
             this.pnlContainer.Location = new System.Drawing.Point(220, 1);
             this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(724, 560);
+            this.pnlContainer.Size = new System.Drawing.Size(724, 740);
             this.pnlContainer.TabIndex = 3;
             // 
-            // btnManageOrders
+            // timer1
             // 
-            this.btnManageOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnManageOrders.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnManageOrders.FlatAppearance.BorderSize = 0;
-            this.btnManageOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnManageOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnManageOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageOrders.ForeColor = System.Drawing.Color.White;
-            this.btnManageOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnManageOrders.Image")));
-            this.btnManageOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnManageOrders.Location = new System.Drawing.Point(0, 413);
-            this.btnManageOrders.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnManageOrders.Name = "btnManageOrders";
-            this.btnManageOrders.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnManageOrders.Size = new System.Drawing.Size(203, 40);
-            this.btnManageOrders.TabIndex = 23;
-            this.btnManageOrders.Text = "Manage Orders";
-            this.btnManageOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageOrders.UseVisualStyleBackColor = false;
-            this.btnManageOrders.Click += new System.EventHandler(this.BtnManageOrders_Click);
-            // 
-            // btnManageMenu
-            // 
-            this.btnManageMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnManageMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnManageMenu.FlatAppearance.BorderSize = 0;
-            this.btnManageMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnManageMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnManageMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageMenu.ForeColor = System.Drawing.Color.White;
-            this.btnManageMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnManageMenu.Image")));
-            this.btnManageMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnManageMenu.Location = new System.Drawing.Point(0, 212);
-            this.btnManageMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnManageMenu.Name = "btnManageMenu";
-            this.btnManageMenu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnManageMenu.Size = new System.Drawing.Size(203, 40);
-            this.btnManageMenu.TabIndex = 20;
-            this.btnManageMenu.Text = "Manage Menu";
-            this.btnManageMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMenu.UseVisualStyleBackColor = false;
-            this.btnManageMenu.Click += new System.EventHandler(this.BtnManageMenu_Click);
-            // 
-            // btnManageEmployees
-            // 
-            this.btnManageEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
-            this.btnManageEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnManageEmployees.FlatAppearance.BorderSize = 0;
-            this.btnManageEmployees.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(61)))));
-            this.btnManageEmployees.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
-            this.btnManageEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageEmployees.ForeColor = System.Drawing.Color.White;
-            this.btnManageEmployees.Image = ((System.Drawing.Image)(resources.GetObject("btnManageEmployees.Image")));
-            this.btnManageEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnManageEmployees.Location = new System.Drawing.Point(0, 51);
-            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnManageEmployees.Name = "btnManageEmployees";
-            this.btnManageEmployees.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.btnManageEmployees.Size = new System.Drawing.Size(203, 40);
-            this.btnManageEmployees.TabIndex = 17;
-            this.btnManageEmployees.Text = "Manage Employees";
-            this.btnManageEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageEmployees.UseVisualStyleBackColor = false;
-            this.btnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(944, 561);
+            this.ClientSize = new System.Drawing.Size(944, 741);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlSideBar);
@@ -535,6 +586,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResManaged 2.0";
             this.pnlSideBar.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnlManageOrdersDD.ResumeLayout(false);
             this.pnlSubMenuDiv2.ResumeLayout(false);
             this.pnlManageMenuDD.ResumeLayout(false);
@@ -575,6 +628,10 @@
         private System.Windows.Forms.Button btnManageEmployees;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlContainer;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnNoti;
+        private System.Windows.Forms.Label lblNotiCount;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ResManaged3.App;
 using ResManaged3.UI.Elements;
 
+
 namespace ResManaged3.UI.Containers
 {
     public partial class MenuAllItems : Form
